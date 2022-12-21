@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =  [ (import ../modules/nvim.nix) ];
+  imports =  [
+    (import ../modules/nvim.nix)
+    (import ../modules/git.nix)
+  ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -20,15 +23,4 @@
 
   # Let Home Manager install and manage itself.
   #programs.home-manager.enable = true;
-
-  programs.git = {
-    enable = true;
-    userEmail = "ejiek@pm.me";
-    userName = "Vlad Petrov";
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-    };
-  };
 }
