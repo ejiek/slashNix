@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports =  [ (import ../modules/nvim.nix) ];
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "ejiek";
@@ -18,19 +20,6 @@
 
   # Let Home Manager install and manage itself.
   #programs.home-manager.enable = true;
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-    plugins = with pkgs.vimPlugins; [
-      airline
-      copilot-vim
-      gruvbox-community
-      vim-nix
-      yankring
-    ];
-  };
 
   programs.git = {
     enable = true;
