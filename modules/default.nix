@@ -3,4 +3,5 @@
   ./git.nix
   ./nvim.nix
   ./zsh.nix
+  ./starship.nix
 ]

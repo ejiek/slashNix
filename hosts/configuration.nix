@@ -115,7 +115,6 @@
     i3lock-color
     nodejs-16_x
     qutebrowser
-    starship
     stow
     wget
     xorg.xmodmap
