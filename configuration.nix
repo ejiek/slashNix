@@ -155,15 +155,4 @@
   system.stateVersion = "21.05"; # Did you read the comment?
 
   networking.networkmanager.enable = true;
-
-  #home-manager.users.ejiek = {pkgs, ...}: {
-  #  home.stateVersion = "21.05";
-  #  home.packages = [ pkgs.neovim ];
-  #  #programs.neovim = {
-  #  #  enable = true;
-  #  #  viAlias = true;
-  #  #  vimAlias = true;
-  #  #  withNodeJs = true;
-  #  #};
-  #};
 }
