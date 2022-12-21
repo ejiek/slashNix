@@ -113,7 +113,7 @@
     firefox
     helix
     i3lock-color
-    nodejs
+    nodejs-16_x
     qutebrowser
     starship
     stow
