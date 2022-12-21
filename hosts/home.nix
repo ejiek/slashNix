@@ -1,10 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports =  [
-    (import ../modules/nvim.nix)
-    (import ../modules/git.nix)
-  ];
+  imports = (import ../modules);
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.

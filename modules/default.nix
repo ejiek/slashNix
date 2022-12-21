@@ -1,0 +1,4 @@
+[
+  ./git.nix
+  ./nvim.nix
+]
