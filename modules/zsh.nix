@@ -56,6 +56,7 @@
       suspendless="systemd-inhibit --what=handle-lid-switch sleep infinity";
     };
     initExtra = ''
+      bindkey -e
       # Searches for lines with same beginning
       autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
       zle -N up-line-or-beginning-search
