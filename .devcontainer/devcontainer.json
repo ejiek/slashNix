@@ -1,8 +1,8 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "features": {
-        "ghcr.io/devcontainers/features/nix:1": {
-            "flakeUri": "github:kamadorueda/alejandra/3.0.0"
-        }
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {
+      "flakeUri": "github:kamadorueda/alejandra/3.0.0"
     }
   }
+}
