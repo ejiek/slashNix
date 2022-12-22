@@ -55,6 +55,15 @@
       ssproxy="ssh -D 1080 -C -q -N";
       suspendless="systemd-inhibit --what=handle-lid-switch sleep infinity";
     };
+    initExtra = ''
+      # Searches for lines with same beginning
+      autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+      zle -N up-line-or-beginning-search
+      zle -N down-line-or-beginning-search
+
+      bindkey -- "^P" up-line-or-beginning-search
+      bindkey -- "^N" down-line-or-beginning-search
+    '';
     profileExtra = "
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
