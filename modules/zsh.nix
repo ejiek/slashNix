@@ -64,11 +64,11 @@
       bindkey -- "^P" up-line-or-beginning-search
       bindkey -- "^N" down-line-or-beginning-search
     '';
-    profileExtra = "
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
-";
+    profileExtra = ''
+      if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+        exec startx
+      fi
+    '';
   };
 }
 
