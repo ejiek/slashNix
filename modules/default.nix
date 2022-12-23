@@ -4,4 +4,5 @@
   ./nvim.nix
   ./zsh.nix
   ./starship.nix
+  ./qutebrowser.nix
 ]

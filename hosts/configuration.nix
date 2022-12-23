@@ -113,7 +113,6 @@
     helix
     i3lock-color
     nodejs-16_x
-    qutebrowser
     stow
     wget
     xorg.xmodmap
