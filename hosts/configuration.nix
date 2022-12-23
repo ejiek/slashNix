@@ -55,15 +55,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableGlobalCompInit = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-  };
-
-
   # Enable sound.
   sound.enable = true;
   # hardware.pulseaudio.enable = true;
