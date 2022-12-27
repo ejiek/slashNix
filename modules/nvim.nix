@@ -16,7 +16,12 @@
     vimAlias = true;
     vimdiffAlias = true;
     plugins = with pkgs.vimPlugins; [
-      airline
+      {
+        plugin = airline;
+        config = ''
+          let g:airline_powerline_fonts = 1
+        '';
+      }
       copilot-vim
       {
         plugin = gruvbox-community;
