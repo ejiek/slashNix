@@ -18,9 +18,17 @@
     plugins = with pkgs.vimPlugins; [
       airline
       copilot-vim
-      gruvbox-community
+      {
+        plugin = gruvbox-community;
+        config = ''
+          set termguicolors
+          colorscheme gruvbox
+          set background=light
+        '';
+      }
       vim-nix
       yankring
     ];
+
   };
 }
