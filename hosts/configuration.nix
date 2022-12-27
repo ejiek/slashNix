@@ -110,9 +110,23 @@
     zathura
   ];
 
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+  fonts = {
+    fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
+      noto-fonts-emoji
+    ];
+
+    enableDefaultFonts = true;
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        serif = [ "Hack" ];
+        sansSerif = [ "Hack" ];
+        monospace = [ "FiraCode" ];
+        emoji = [ "Noto Monochrome Emoji" ];
+      };
+    };
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = false;
