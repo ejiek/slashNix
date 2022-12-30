@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, ... }:
+{ lib, inputs, nixpkgs, home-manager, hyprland, ... }:
 
 let 
   system = "x86_64-linux";
@@ -20,6 +20,8 @@ in {
         home-manager.users.ejiek = import ./home.nix;
         
       }
+      hyprland.nixosModules.default
+      {programs.hyprland.enable = true;}
     ];
   };
 }
