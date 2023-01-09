@@ -13,16 +13,53 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/67c02b51-8957-48fe-9acc-43e74a1348d9";
-      fsType = "ext4";
+    { device = "rpool/nixos/root";
+      fsType = "zfs"; options = [ "zfsutil" "X-mount.mkdir" ];
+    };
+
+  fileSystems."/home" =
+    { device = "rpool/nixos/home";
+      fsType = "zfs"; options = [ "zfsutil" "X-mount.mkdir" ];
+    };
+
+  fileSystems."/var/lib" =
+    { device = "rpool/nixos/var/lib";
+      fsType = "zfs"; options = [ "zfsutil" "X-mount.mkdir" ];
+    };
+
+  fileSystems."/var/log" =
+    { device = "rpool/nixos/var/log";
+      fsType = "zfs"; options = [ "zfsutil" "X-mount.mkdir" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/B9C5-9AE4";
+    { device = "bpool/nixos/root";
+      fsType = "zfs"; options = [ "zfsutil" "X-mount.mkdir" ];
+    };
+
+  fileSystems."/boot/efis/ata-Samsung_SSD_860_EVO_500GB_S4FNNF0N120507Y-part1" =
+    { device = "/dev/disk/by-uuid/ACB5-B6F2";
       fsType = "vfat";
+    };
+
+  fileSystems."/boot/efi" =
+    { device = "/boot/efis/ata-Samsung_SSD_860_EVO_500GB_S4FNNF0N120507Y-part1";
+      fsType = "none";
+      options = [ "bind" ];
     };
 
   swapDevices = [ ];
 
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s25.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
