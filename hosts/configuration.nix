@@ -28,17 +28,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  # };
-
-  # Configure keymap in X11
-  services.xserver.layout = "us,ru";
-  services.xserver.xkbOptions = "grp:escape,grp_led:caps";
-
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
