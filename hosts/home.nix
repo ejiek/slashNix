@@ -111,7 +111,7 @@
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = $mainMod, Return, exec, alacritty
       bind = $mainMod, C, killactive,
-      bind = $mainMod, M, exit,
+      bind = $mainMod_SHIFT, Q, exit,
       bind = $mainMod, Q, exec, qutebrowser
       bind = $mainMod, V, togglefloating,
       bind = $mainMod, R, exec, wofi --show drun
