@@ -65,7 +65,7 @@
       KEYBOARD_KEY_38=leftctrl
       KEYBOARD_KEY_db=leftalt
       KEYBOARD_KEY_70=rightalt
-      KEYBOARD_KEY_3a=escape
+      KEYBOARD_KEY_3a=esc
       KEYBOARD_KEY_01=capslock
     '';
 
