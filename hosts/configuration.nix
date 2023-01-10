@@ -88,11 +88,13 @@
     fira-code
     fira-mono
     firefox
+    gomuks
     helix
     i3lock-color
     nodejs-16_x
     stow
     wget
+    xdg-utils
     zathura
   ];
 
