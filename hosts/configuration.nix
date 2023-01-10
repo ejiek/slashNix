@@ -35,19 +35,9 @@
   #   keyMap = "us";
   # };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.windowManager.xmonad = {
-    enable = true;
-    enableContribAndExtras = true;
-  };
-
   # Configure keymap in X11
   services.xserver.layout = "us,ru";
   services.xserver.xkbOptions = "grp:escape,grp_led:caps";
-
-  # Disabling default display manager
-  services.xserver.displayManager.startx.enable = true;
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -103,7 +93,6 @@
     nodejs-16_x
     stow
     wget
-    xorg.xmodmap
     zathura
   ];
 

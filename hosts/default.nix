@@ -20,8 +20,15 @@ in {
         home-manager.users.ejiek = import ./home.nix;
         
       }
-      hyprland.nixosModules.default
-      {programs.hyprland.enable = true;}
+      hyprland.nixosModules.default {
+        programs.hyprland = {
+          enable = true;
+          xwayland = {
+            enable  = true;
+            hidpi = false;
+          };
+        };
+      }
     ];
   };
 }
