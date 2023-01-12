@@ -114,16 +114,16 @@
       bind = $mainMod_SHIFT, Q, exit,
       bind = $mainMod SHIFT, L, exec, swaylock -f -i ~/pictures/lock.jpg
       bind = $mainMod, Q, exec, qutebrowser
-      bind = $mainMod, V, togglefloating,
+      bind = $mainMod, M, togglefloating,
       bind = $mainMod, R, exec, wofi --show drun
       bind = $mainMod, P, pseudo, # dwindle
-      bind = $mainMod, J, togglesplit, # dwindle
+      bind = $mainMod, S, togglesplit, # dwindle
 
-      # Move focus with mainMod + arrow keys
-      bind = $mainMod, left, movefocus, l
-      bind = $mainMod, right, movefocus, r
-      bind = $mainMod, up, movefocus, u
-      bind = $mainMod, down, movefocus, d
+      # Move focus with mainMod + hjkl
+      bind = $mainMod, H, movefocus, l
+      bind = $mainMod, L, movefocus, r
+      bind = $mainMod, K, movefocus, u
+      bind = $mainMod, J, movefocus, d
 
       # Switch workspaces with mainMod + [0-9]
       bind = $mainMod, 1, workspace, 1
