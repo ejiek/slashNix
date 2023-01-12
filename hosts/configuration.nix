@@ -79,7 +79,6 @@
     firefox
     gomuks
     helix
-    i3lock-color
     nodejs-16_x
     stow
     wget
@@ -107,6 +106,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = false;
+
+  security.pam.services.swaylock = {};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
