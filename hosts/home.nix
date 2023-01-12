@@ -112,6 +112,7 @@
       bind = $mainMod, Return, exec, alacritty
       bind = $mainMod, C, killactive,
       bind = $mainMod_SHIFT, Q, exit,
+      bind = $mainMod SHIFT, L, exec, swaylock -f -i ~/pictures/lock.jpg
       bind = $mainMod, Q, exec, qutebrowser
       bind = $mainMod, V, togglefloating,
       bind = $mainMod, R, exec, wofi --show drun
