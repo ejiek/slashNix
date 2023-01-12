@@ -80,6 +80,7 @@
     gomuks
     helix
     nodejs-16_x
+    ripgrep
     stow
     wget
     xdg-utils
