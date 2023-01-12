@@ -79,6 +79,7 @@
     firefox
     gomuks
     helix
+    lf
     nodejs-16_x
     ripgrep
     stow
