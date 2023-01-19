@@ -5,4 +5,5 @@
   ./zsh.nix
   ./starship.nix
   ./qutebrowser.nix
+  ./pass.nix
 ]
