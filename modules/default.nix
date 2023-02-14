@@ -3,8 +3,8 @@
   ./git.nix
   ./gnupg.nix
   ./nvim.nix
-  ./zsh.nix
-  ./starship.nix
-  ./qutebrowser.nix
   ./pass.nix
+  ./qutebrowser.nix
+  ./starship.nix
+  ./zsh.nix
 ]
