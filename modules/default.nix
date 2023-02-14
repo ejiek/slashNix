@@ -1,6 +1,7 @@
 [
   ./alacritty.nix
   ./git.nix
+  ./gnupg.nix
   ./nvim.nix
   ./zsh.nix
   ./starship.nix
