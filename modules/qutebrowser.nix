@@ -53,8 +53,9 @@
       man = "https://man.archlinux.org/man/{}";
       market = "https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1";
       netflix = "https://www.netflix.com/search?q={}";
-      nix = "https://search.nixos.org/packages?channel=22.11&from=0&size=50&sort=relevance&type=packages&query={}";
-      nixo = "https://search.nixos.org/packages?channel=22.11&from=0&size=50&sort=relevance&type=options&query={}";
+      nix = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}";
+      nixo = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=options&query={}";
+      nw = "https://nixos.wiki/index.php?search={}&go=Go";
       ob = "https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}";
       obs = "https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues?scope=all&utf8=%E2%9C%93&state=all&search={}";
       og = "https://gitlab.ocado.tech/dashboard/groups?utf8=%E2%9C%93&filter={}";
