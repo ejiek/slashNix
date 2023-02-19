@@ -110,12 +110,12 @@
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = $mainMod, Return, exec, alacritty
+      bind = $mainMod, Space, exec, tofi-drun --drun-launch=true
       bind = $mainMod, C, killactive,
       bind = $mainMod_SHIFT, Q, exit,
       bind = $mainMod SHIFT, L, exec, swaylock -f -i ~/pictures/lock.jpg
       bind = $mainMod, Q, exec, qutebrowser
       bind = $mainMod, M, togglefloating,
-      bind = $mainMod, R, exec, wofi --show drun
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, S, togglesplit, # dwindle
 
