@@ -12,13 +12,17 @@
         url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+      rust-overlay = {
+        url = "github:oxalica/rust-overlay";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
 
-    outputs = inputs @ { self, nixpkgs, home-manager, hyprland, ...}: {
+    outputs = inputs @ { self, nixpkgs, home-manager, hyprland, rust-overlay, ...}: {
       nixosConfigurations = (
         import ./hosts {
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager hyprland;
+          inherit inputs nixpkgs home-manager hyprland rust-overlay;
         }
       );
     };
