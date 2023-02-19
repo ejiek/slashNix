@@ -74,6 +74,7 @@
   environment.systemPackages = with pkgs; [
     bitwarden
     bitwarden-cli
+    exa
     fira
     fira-code
     fira-mono
