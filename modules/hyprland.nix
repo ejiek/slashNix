@@ -4,4 +4,8 @@
   programs.hyprland = {
     enable = true;
   };
+
+  programs.tofi = {
+    enable = true;
+  };
 }
