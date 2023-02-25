@@ -66,7 +66,7 @@
   users.users.ejiek = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   # List packages installed in system profile. To search, run:
