@@ -27,6 +27,8 @@
         '';
       }
       copilot-vim
+      coc-markdownlint
+      coc-ltex
       {
         plugin = gruvbox-community;
         config = ''
@@ -55,7 +57,17 @@
       vim-signify
       vim-startify
     ];
-    coc.enable = true;
+    coc = {
+      enable = true;
+      settings = {
+          "markdownlint.config" = {
+            "default" = true;
+            "line-length" = false;
+          };
+          "ltex.ltex-ls.path" = "${pkgs.ltex-ls}";
+          "ltex.java.path" = "${pkgs.jre_headless}";
+      };
+    };
   };
 
   home.packages = with pkgs; [
@@ -63,6 +75,7 @@
     bat
     fd
     fzf
+    ltex-ls
     ripgrep
     # TODO: get rid of node_Packages for every line
     nodePackages.coc-css
