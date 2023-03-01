@@ -26,6 +26,12 @@ The final step is to use new system/ switch to it. I have it aliased to `nwitch`
 sudo nixos-rebuild switch --flake /home/ejiek/.slashNix/flake.nix#e220
 ```
 
+There are other inputs in this flake. To get a list:
+
+```bash
+nix flake metadata
+```
+
 ### Updating nix-env packages
 
 Before deciding if a given package is going to stick with my system I prefer to use it without adding it to my config.
