@@ -1,5 +1,6 @@
 [
   ./alacritty.nix
+  ./bat.nix
   ./git.nix
   ./gnupg.nix
   ./nvim.nix
