@@ -32,6 +32,13 @@ There are other inputs in this flake. To get a list:
 nix flake metadata
 ```
 
+Updating inputs one by one makes it easier to understand which one is responsible for a failure.
+Nevertheless, for a lucky path it's easier to update them all at once:
+
+```bash
+nix flake update
+```
+
 ### Updating nix-env packages
 
 Before deciding if a given package is going to stick with my system I prefer to use it without adding it to my config.
