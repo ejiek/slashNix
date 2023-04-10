@@ -1,6 +1,6 @@
 {
   config,
-  pkg,
+  pkgs,
   ...
 }:
 
@@ -12,5 +12,6 @@
       alias ntest = sudo nixos-rebuild test --flake '/home/ejiek/.slashNix/flake.nix#e220'
     '';
   };
-}
 
+  home.packages = [ pkgs.nu_scripts ];
+}
