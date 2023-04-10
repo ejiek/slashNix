@@ -3,7 +3,6 @@
   inputs,
   nixpkgs,
   home-manager,
-  hyprland,
   rust-overlay,
   ...
 }:
@@ -27,15 +26,6 @@ in {
         home-manager.useUserPackages = true;
         home-manager.users.ejiek = import ./home.nix;
         
-      }
-      hyprland.nixosModules.default {
-        programs.hyprland = {
-          enable = true;
-          xwayland = {
-            enable  = true;
-            hidpi = false;
-          };
-        };
       }
       ({ pkgs, ... }: {
         nixpkgs.overlays = [ rust-overlay.overlays.default ];
