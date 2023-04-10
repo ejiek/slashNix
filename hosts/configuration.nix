@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./zfs.nix
       ../modules/podman.nix
+      ../modules/hyprland.nix
     ];
 
   # networking.hostName = "nixos"; # Define your hostname.

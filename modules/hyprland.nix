@@ -8,7 +8,6 @@
       hidpi = false;
     };
   };
-  programs.tofi = {
-    enable = true;
-  };
+
+  environment.systemPackages = with pkgs; [ tofi ];
 }
