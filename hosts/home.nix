@@ -103,6 +103,12 @@
       # Example windowrule v2
       # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+      windowrule=move 100%-260 20,title:^(HealthBar)(.*)$
+      windowrule=noblur,title:^(HealthBar)(.*)$
+      windowrule=nofocus,title:^(HealthBar)(.*)$
+      windowrule=noshadow,title:^(HealthBar)(.*)$
+      windowrule=noborder,title:^(HealthBar)(.*)$
+      windowrule=pin,title:^(HealthBar)(.*)$
 
 
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
