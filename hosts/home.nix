@@ -162,6 +162,11 @@
       # Move/resize windows with mainMod + LMB/RMB and dragging
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
+
+      # Media keys
+      bind = ,XF86AudioRaiseVolume, exec, pw-volume change '+5%'
+      bind = ,XF86AudioLowerVolume, exec, pw-volume change '-5%'
+      bind = ,XF86AudioMute, exec, pw-volume mute toggle
     '';
   };
 
