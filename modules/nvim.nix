@@ -16,8 +16,28 @@
     vimAlias = true;
     vimdiffAlias = true;
     extraConfig = ''
+      " Show current line and distance from it
       set rnu
       set nu
+
+      " Tabbulation
+      set autoindent   " Indent according to previous line.
+      set expandtab
+      set tabstop=2
+      set shiftwidth=2
+
+      " Show tabs and trailing whitespace
+      set list
+      set listchars=tab:▸\ ,trail:·
+
+      set viminfo='10,\"100,:20,%,n~/.viminfo
+
+      " Better window navigation
+      nnoremap <C-h> <C-w>h
+      nnoremap <C-j> <C-w>j
+      nnoremap <C-k> <C-w>k
+      nnoremap <C-l> <C-w>l
+      " Split vetically with ctrl+| and horizontally with ctrl+/
     '';
     plugins = with pkgs.vimPlugins; [
       {
