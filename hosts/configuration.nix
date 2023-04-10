@@ -80,9 +80,14 @@
     fira-mono
     firefox
     gomuks
+    gimp
+    gh
     helix
+    inkscape
     lf
+    libwebp
     nodejs-16_x
+    pw-volume
     ripgrep
     stow
     tdesktop
@@ -90,6 +95,7 @@
     wget
     xdg-utils
     zathura
+    zellij
   ];
 
   fonts = {
