@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, hyprland, ... }:
+{ config, pkgs, hyprland, lib, ... }:
 
 {
   imports =
@@ -84,6 +84,7 @@
     gimp
     gh
     helix
+    obsidian
     inkscape
     lf
     libwebp
@@ -118,6 +119,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "obsidian" ];
   nixpkgs.config.permittedInsecurePackages = [
     "nodejs-16.20.0"
   ];
