@@ -43,7 +43,7 @@
           col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
           col.inactive_border = rgba(595959aa)
 
-          layout = dwindle
+          layout = master
       }
 
       decoration {
@@ -84,7 +84,9 @@
 
       master {
           # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-          new_is_master = true
+          new_is_master = false
+          no_gaps_when_only = true
+          orientation = center
       }
 
       gestures {
@@ -118,12 +120,16 @@
       bind = $mainMod, Return, exec, alacritty
       bind = $mainMod, Space, exec, tofi-drun --drun-launch=true
       bind = $mainMod, C, killactive,
-      bind = $mainMod_SHIFT, Q, exit,
-      bind = $mainMod SHIFT, L, exec, swaylock -f -i ~/pictures/lock.jpg
+      bind = $mainMod SHIFT, Q, exec, swaylock -f -i ~/pictures/lock.jpg
       bind = $mainMod, Q, exec, qutebrowser
-      bind = $mainMod, M, togglefloating,
-      bind = $mainMod, P, pseudo, # dwindle
-      bind = $mainMod, S, togglesplit, # dwindle
+      bind = $mainMod SHIFT, F, togglefloating,
+      bind = $mainMod, F, fullscreen, 0
+
+      # Move windows
+      bind = $mainMod SHIFT, H, swapwindow, l
+      bind = $mainMod SHIFT, L, swapwindow, r
+      bind = $mainMod SHIFT, K, swapwindow, u
+      bind = $mainMod SHIFT, J, swapwindow, d
 
       # Move focus with mainMod + hjkl
       bind = $mainMod, H, movefocus, l
