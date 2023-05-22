@@ -87,7 +87,6 @@
     inkscape
     lf
     libwebp
-    nodejs-16_x
     pw-volume
     ripgrep
     stow
@@ -119,6 +118,9 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.permittedInsecurePackages = [
+    "nodejs-16.20.0"
+  ];
 
   security.pam.services.swaylock = {};
 
