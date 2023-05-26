@@ -25,7 +25,24 @@
       set autoindent   " Indent according to previous line.
       set expandtab
       set tabstop=2
+      set softtabstop=2
       set shiftwidth=2
+
+      set nowrap
+
+      " Undo tree for the win
+      set noswapfile
+      set nobackup
+      set undodir=~/.local/share/nvim/undodir
+      set undofile
+
+      set nohlsearch
+      set incsearch
+
+      set scrolloff=5
+      set sidescrolloff=5
+
+      set colorcolumn=80
 
       " Show tabs and trailing whitespace
       set list
@@ -45,6 +62,23 @@
       " Split vetically with ctrl+| and horizontally with ctrl+/
 
       nnoremap <leader>pv :Explore<cr>
+    '';
+    extraLuaConfig = ''
+      vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+      vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+      vim.keymap.set("n", "<C-d>", "<C-d>zz")
+      vim.keymap.set("n", "<C-u>", "<C-u>zz")
+      vim.keymap.set("n", "n", "nzz")
+      vim.keymap.set("n", "N", "Nzz")
+
+      -- clipboard management
+      vim.keymap.set("x", "<leader>p", '"_dP')
+      vim.keymap.set("n", "<leader>y", "\"+y")
+      vim.keymap.set("v", "<leader>y", "\"+y")
+      vim.keymap.set("n", "<leader>Y", "\"+Y")
+      vim.keymap.set("n", "<leader>d", "\"_d")
+      vim.keymap.set("v", "<leader>d", "\"_d")
     '';
     plugins = with pkgs.vimPlugins; [
       {
@@ -139,6 +173,13 @@
           vim.keymap.set("n", "<Alt-s>", function() ui.nav_file(2) end)
           vim.keymap.set("n", "<Alt-d>", function() ui.nav_file(3) end)
           vim.keymap.set("n", "<Alt-f>", function() ui.nav_file(4) end)
+
+          vim.keymap.set("n", "C-k", "<cmd>cnext<CR>zz")
+          vim.keymap.set("n", "C-j", "<cmd>cprev<CR>zz")
+          vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+          vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+          vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
         '';
       }
       vim-devicons
