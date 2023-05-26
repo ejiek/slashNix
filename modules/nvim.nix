@@ -53,7 +53,23 @@
           let g:airline_powerline_fonts = 1
         '';
       }
-      copilot-vim
+      {
+        plugin = copilot-lua;
+        type = "lua";
+        config = ''
+          require("copilot").setup({
+            suggestion = { enable = false },
+            panel = { enable = false },
+          })
+        '';
+      }
+      {
+        plugin = copilot-cmp;
+        type = "lua";
+        config = ''
+          require("copilot_cmp").setup()
+        '';
+      }
       {
         plugin = gruvbox-community;
         config = ''
@@ -75,7 +91,6 @@
           nnoremap <leader>fl <cmd>Telescope live_grep<cr>
         '';
       }
-      nvim-cmp
       {
         plugin = nvim-treesitter;
         type = "lua";
@@ -118,12 +133,12 @@
           local ui = require("harpoon.ui")
 
           vim.keymap.set("n", "<leader>a", mark.add_file)
-          vim.keymap.set("n", "<C-d>", ui.toggle_quick_menu)
+          vim.keymap.set("n", "<Alt-g>", ui.toggle_quick_menu)
 
-          vim.keymap.set("n", "<C-j>", function() ui.nav_file(1) end)
-          vim.keymap.set("n", "<C-k>", function() ui.nav_file(2) end)
-          vim.keymap.set("n", "<C-l>", function() ui.nav_file(3) end)
-          vim.keymap.set("n", "<C-Semicolon>", function() ui.nav_file(4) end)
+          vim.keymap.set("n", "<Alt-a>", function() ui.nav_file(1) end)
+          vim.keymap.set("n", "<Alt-s>", function() ui.nav_file(2) end)
+          vim.keymap.set("n", "<Alt-d>", function() ui.nav_file(3) end)
+          vim.keymap.set("n", "<Alt-f>", function() ui.nav_file(4) end)
         '';
       }
       vim-devicons
@@ -145,6 +160,59 @@
           vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
         '';
       }
+      nvim-lspconfig
+      nvim-cmp
+      cmp-nvim-lsp
+      luasnip
+      {
+        plugin = lsp-zero-nvim;
+        type = "lua";
+        config = ''
+          local lsp = require("lsp-zero")
+
+          lsp.preset("recommended")
+
+          local cmp = require('cmp')
+          local cmp_select = {behavior = cmp.SelectBehavior.Select}
+          local cmp_mappings = lsp.defaults.cmp_mappings({
+            ['<C-p>'] = cmp.mapping.select_prev_item(cpm_select),
+            ['<C-n>'] = cmp.mapping.select_next_item(cpm_select),
+            ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+            ["<C-Space>"] = cmp.mapping.complete(),
+            ['<CR>'] = cmp.mapping.confirm({
+              behavior = cmp.ConfirmBehavior.Replace,
+              select = false,
+            }),
+          })
+
+          lsp.setup_nvim_cmp({
+            mapping = cmp_mappings
+          })
+
+          lsp.on_attach(function(client, bufnr)
+            lsp.default_keymaps({ buffer = bufnr })
+          end)
+
+          lsp.setup_servers({
+            'tsserver',
+            'eslint',
+            'rust_analyzer',
+            'nil_ls',
+            'pyright',
+            'gopls',
+            'bashls',
+          })
+
+          lsp.setup()
+
+          cmp.setup({
+            sources = {
+              {name = 'copilot'},
+              {name = 'nvim_lsp'},
+            }
+          })
+        '';
+      }
     ];
   };
 
@@ -154,5 +222,14 @@
     fd
     fzf
     ripgrep
+    # language servers
+    nodePackages.typescript-language-server
+    nodePackages.eslint
+    rust-analyzer
+    nil
+    nodePackages.pyright
+    gopls
+    nodePackages.bash-language-server
+    shellcheck
   ];
 }
