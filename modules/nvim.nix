@@ -228,7 +228,6 @@ in
       nvim-lspconfig
       nvim-cmp
       cmp-nvim-lsp
-      luasnip
       {
         plugin = lsp-zero-nvim;
         type = "lua";
@@ -274,10 +273,12 @@ in
             sources = {
               {name = 'copilot'},
               {name = 'nvim_lsp'},
+              {name = 'path'},
             }
           })
         '';
       }
+      cmp-path
     ];
   };
 
