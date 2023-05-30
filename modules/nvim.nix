@@ -54,6 +54,10 @@
       " Fixes file creation in netrw
       set shell=/etc/profiles/per-user/ejiek/bin/zsh
 
+      " Navigation with russian layout
+      set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+
       " Better window navigation
       nnoremap <C-h> <C-w>h
       nnoremap <C-j> <C-w>j
