@@ -8,6 +8,4 @@
       hidpi = false;
     };
   };
-
-  environment.systemPackages = with pkgs; [ tofi ];
 }

@@ -6,6 +6,8 @@
   ./nvim.nix
   ./nu.nix
   ./pass.nix
+  ./rbw.nix
+  ./rofi.nix
   ./qutebrowser.nix
   ./starship.nix
   ./zsh.nix

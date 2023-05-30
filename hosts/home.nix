@@ -118,7 +118,10 @@
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = $mainMod, Return, exec, alacritty
-      bind = $mainMod, Space, exec, tofi-drun --drun-launch=true
+      bind = $mainMod, Space, exec, rofi -show drun
+      bind = $mainMod, P, exec, rofi-rbw
+      bind = $mainMod, E, exec, rofimoji
+      bind = $mainMod SHIFT, E, exec, rofi -show emoji
       bind = $mainMod, C, killactive,
       bind = $mainMod SHIFT, Q, exec, swaylock -f -i ~/pictures/lock.jpg
       bind = $mainMod, Q, exec, qutebrowser
