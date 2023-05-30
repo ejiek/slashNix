@@ -66,7 +66,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ejiek = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "libvirtd"]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
   };
 
@@ -92,6 +92,7 @@
     stow
     tdesktop
     transmission
+    virt-manager
     wget
     xdg-utils
     zathura
@@ -139,6 +140,8 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  networking.nftables.enable = true;
+  networking.firewall.enable = true;
 
   services.tailscale.enable = true;
 
@@ -151,4 +154,9 @@
   system.stateVersion = "22.11"; # Did you read the comment?
 
   networking.networkmanager.enable = true;
+
+  # Virtualization
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+
 }
