@@ -50,6 +50,12 @@
       options = [ "bind" ];
     };
 
+  fileSystems."/home/ejiek/.local/share/containers" =
+    { device = "/dev/disk/by-uuid/7451ad1b-d997-428c-8883-979d8dc72b52";
+      fsType = "ext4";
+    };
+
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
