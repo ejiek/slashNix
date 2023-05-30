@@ -75,26 +75,32 @@
   environment.systemPackages = with pkgs; [
     bitwarden
     exa
+    figlet
     fira
     fira-code
     fira-mono
     firefox
-    gomuks
-    gimp
     gh
+    gimp
+    gomuks
     helix
-    obsidian
     inkscape
+    kind
     lf
     libwebp
+    lolcat
+    obsidian
     pw-volume
     ripgrep
     stow
     tdesktop
     transmission
+    trivy
+    nodejs
     virt-manager
     wget
     xdg-utils
+    yt-dlp
     zathura
     zellij
   ];
