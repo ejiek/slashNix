@@ -171,12 +171,12 @@
           local ui = require("harpoon.ui")
 
           vim.keymap.set("n", "<leader>a", mark.add_file)
-          vim.keymap.set("n", "<Alt-g>", ui.toggle_quick_menu)
+          vim.keymap.set("n", "<A-g>", ui.toggle_quick_menu)
 
-          vim.keymap.set("n", "<Alt-a>", function() ui.nav_file(1) end)
-          vim.keymap.set("n", "<Alt-s>", function() ui.nav_file(2) end)
-          vim.keymap.set("n", "<Alt-d>", function() ui.nav_file(3) end)
-          vim.keymap.set("n", "<Alt-f>", function() ui.nav_file(4) end)
+          vim.keymap.set("n", "<A-a>", function() ui.nav_file(1) end)
+          vim.keymap.set("n", "<A-s>", function() ui.nav_file(2) end)
+          vim.keymap.set("n", "<A-d>", function() ui.nav_file(3) end)
+          vim.keymap.set("n", "<A-f>", function() ui.nav_file(4) end)
 
           vim.keymap.set("n", "C-k", "<cmd>cnext<CR>zz")
           vim.keymap.set("n", "C-j", "<cmd>cprev<CR>zz")
