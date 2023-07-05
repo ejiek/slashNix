@@ -70,6 +70,7 @@
       "libvirtd"
       "networkmanager"
       "wheel"
+      "wireshark"
     ];
     shell = pkgs.nushell;
   };
@@ -103,6 +104,7 @@
     nodejs
     virt-manager
     wget
+    wireshark
     xdg-utils
     yt-dlp
     zathura
