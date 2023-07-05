@@ -66,7 +66,11 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ejiek = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "libvirtd"]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "libvirtd"
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.nushell;
   };
 
