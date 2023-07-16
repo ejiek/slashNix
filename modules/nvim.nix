@@ -227,6 +227,7 @@ in
       }
       nvim-lspconfig
       nvim-cmp
+      luasnip
       cmp-nvim-lsp
       {
         plugin = lsp-zero-nvim;
