@@ -79,7 +79,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     bitwarden
-    exa
     figlet
     fira
     fira-code

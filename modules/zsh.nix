@@ -1,6 +1,6 @@
 {
   config,
-  pkg,
+  pkgs,
   ...
 }:
 
@@ -73,5 +73,8 @@
       fi
     '';
   };
-}
 
+  home.packages = with pkgs; [
+    exa
+  ];
+}
