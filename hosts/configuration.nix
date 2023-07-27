@@ -115,8 +115,6 @@
       (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
       noto-fonts-emoji
     ];
-
-    enableDefaultFonts = true;
     fontconfig = {
       enable = true;
       defaultFonts = {
