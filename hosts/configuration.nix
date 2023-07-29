@@ -152,7 +152,10 @@
   networking.nftables.enable = true;
   networking.firewall.enable = true;
 
-  services.tailscale.enable = true;
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
