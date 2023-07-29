@@ -91,6 +91,7 @@
     inkscape
     kind
     lf
+    libimobiledevice
     libwebp
     lolcat
     obsidian
@@ -109,6 +110,8 @@
     zathura
     zellij
   ];
+
+  services.usbmuxd.enable = true;
 
   fonts = {
     fonts = with pkgs; [
