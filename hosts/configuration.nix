@@ -114,7 +114,7 @@
   services.usbmuxd.enable = true;
 
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
       noto-fonts-emoji
     ];
