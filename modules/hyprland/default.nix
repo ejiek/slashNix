@@ -172,8 +172,13 @@ in {
           bind = $mainMod, K, movefocus, u
           bind = $mainMod, J, movefocus, d
 
-          bind = $mainMod, I, focusmonitor, DP-2
-          bind = $mainMod, O, focusmonitor, HDMI-A-1
+          # Move focus to anothe monitor
+          bind = $mainMod, I, focusmonitor, l
+          bind = $mainMod, O, focusmonitor, r
+
+          # Move window to anothe monitor
+          bind = $mainMod SHIFT, I, movewindow, mon:l
+          bind = $mainMod SHIFT, O, movewindow, mon:r
 
           # Switch workspaces with mainMod + [0-9]
           bind = $mainMod, 1, workspace, 1
