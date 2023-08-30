@@ -43,6 +43,7 @@
     libwebp
     lolcat
     mattermost-desktop
+    mpv
     nodejs
     pandoc
     pulumi-bin
