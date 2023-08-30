@@ -1,14 +1,25 @@
-[
-  ./alacritty.nix
-  ./bat.nix
-  ./git.nix
-  ./gnupg.nix
-  ./nvim.nix
-  ./nu.nix
-  ./pass.nix
-  ./rbw.nix
-  ./rofi.nix
-  ./qutebrowser.nix
-  ./starship.nix
-  ./zsh.nix
-]
+{ config, lib, pkgs, ... }: {
+  imports = [
+    ./alacritty
+    ./bat
+    ./boot
+    ./fileSystems
+    ./git
+    ./hyprland
+    ./networking
+    ./nu
+    ./nvim
+    ./obsidian
+    ./opentabletdriver
+    ./pass
+    ./podman
+    ./qutebrowser
+    ./rbw
+    ./rofi
+    ./starship
+    ./steam
+    ./tailscale
+    ./unfree
+    ./zsh
+    ];
+}

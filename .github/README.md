@@ -2,11 +2,11 @@
 
 This is my attempt to live with NixOS as a daily driver.
 Be cautious that I'm still trying to figure Nix out and fit in.
-There might be serious idiomatic & structure flaws.
+There might be serious idiomatic & structural flaws.
 
 ## Updating
 
-Using Flake means that `nixpkgs` are no longer controlled by `nix-channel`.
+Using Flake means that `nixpkgs` are no longer controlled by `nix-channel` of NixOS.
 Instead, `nixpkgs` are locked to flake input.
 To update the system one needs to update the input:
 
@@ -17,13 +17,13 @@ nix flake lock --update-input nixpkgs
 Next step is testing new version of the system. I have it aliased to `ntest`:
 
 ```bash
-sudo nixos-rebuild test --flake /home/ejiek/.slashNix/flake.nix#e220
+sudo nixos-rebuild test --flake /home/ejiek/.slashNix/flake.nix#
 ```
 
 The final step is to use new system/ switch to it. I have it aliased to `nwitch`:
 
 ```bash
-sudo nixos-rebuild switch --flake /home/ejiek/.slashNix/flake.nix#e220
+sudo nixos-rebuild switch --flake /home/ejiek/.slashNix/flake.nix#
 ```
 
 There are other inputs in this flake. To get a list:
@@ -38,6 +38,13 @@ Nevertheless, for a lucky path it's easier to update them all at once:
 ```bash
 nix flake update
 ```
+
+You can even commit the change:
+
+```bash
+nix flake update --commit-lock-file
+```
+
 
 ### Updating nix-env packages
 
