@@ -141,6 +141,7 @@ in {
             '';
           }
           vim-nix
+          vim-table-mode
           yankring
           {
             plugin = telescope-nvim;
