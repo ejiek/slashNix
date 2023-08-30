@@ -61,7 +61,6 @@
     wireshark
     xdg-utils
     yt-dlp
-    zathura
     zellij
   ];
 

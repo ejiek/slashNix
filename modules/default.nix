@@ -20,6 +20,7 @@
     ./steam
     ./tailscale
     ./unfree
+    ./zathura
     ./zsh
     ];
 }

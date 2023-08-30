@@ -48,6 +48,7 @@
     starship.enable = true;
     steam.enable = true;
     tailscale.enable = true;
+    zathura.enable = true;
     zsh.enable = true;
   };
 }
