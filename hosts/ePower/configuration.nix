@@ -32,6 +32,7 @@
     gimp
     go
     gomuks
+    hdparm
     helix
     inkscape
     k9s
