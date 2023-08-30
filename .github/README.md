@@ -4,6 +4,19 @@ This is my attempt to live with NixOS as a daily driver.
 Be cautious that I'm still trying to figure Nix out and fit in.
 There might be serious idiomatic & structural flaws.
 
+| Machine       | System        | Status |
+| --            | --            | --     |
+| Desktop       | NixOS         | Done   |
+| Laptop        | NixOs         | WIP    |
+| SteamDeck     | SteamOS + Nix | WIP    |
+| PinePhone Pro | NixOS         | TBD    |
+
+## Roadmap
+
+- [ ] Make repo usable by multiple machines (see [Wimpy's repo](https://github.com/wimpysworld/nix-config))
+- [ ] Adopt encryption or a way to store secrets separately (see [agenix](https://github.com/ryantm/agenix))
+- [ ] Document the way(s) this repo is used
+
 ## Updating
 
 Using Flake means that `nixpkgs` are no longer controlled by `nix-channel` of NixOS.
