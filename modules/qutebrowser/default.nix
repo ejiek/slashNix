@@ -51,7 +51,7 @@ in {
           gmaps = "https://www.google.ru/maps/search/{}";
           gw = "https://wiki.gentoo.org/?search={}";
           hoogle = "https://hoogle.haskell.org/?hoogle={}";
-          hm = "https://mipmip.github.io/home-manager-option-search/?{}";
+          hm = "https://mipmip.github.io/home-manager-option-search/?query={}";
           ikea = "https://www.ikea.com/ru/ru/search/?query={}";
           imdb = "http://www.imdb.com/find?ref_=nv_sr_fn&q={}&s=all";
           librs = "https://lib.rs/search?q={}";
