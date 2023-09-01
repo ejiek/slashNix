@@ -54,6 +54,7 @@
     virt-manager
     wget
     wireshark
+    wluma
     xdg-utils
     yt-dlp
     zathura
