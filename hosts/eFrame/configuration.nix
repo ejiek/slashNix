@@ -1,8 +1,7 @@
 { pkgs, nixos-hardware, ... }: {
 
-
+  # networking.useDHCP = true;
   networking.networkmanager.enable = true;
-  networking.useDHCP = true;
 
   # Enable sound.
   sound.enable = true;
