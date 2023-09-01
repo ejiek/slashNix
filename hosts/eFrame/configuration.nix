@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, nixos-hardware, ... }: {
+
 
   networking.networkmanager.enable = true;
   networking.useDHCP = true;
