@@ -13,7 +13,7 @@ in {
     home-manager.users.ejiek = {
       programs.git = {
         enable = true;
-        userEmail = "ejiek@pm.me";
+        userEmail = "git@ejiek.id";
         userName = "Vlad Petrov";
         aliases = {
           lg = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset) %C(dim green)- %an%C(reset)' --all";
