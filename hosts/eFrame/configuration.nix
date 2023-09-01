@@ -1,14 +1,7 @@
 { pkgs, ... }: {
-  networking.useDHCP = true;
-  networking.networkmanager.enable = false;
 
-  # configuration in this file only applies to exampleHost host.
-  programs.tmux = {
-    enable = true;
-    newSession = true;
-    terminal = "tmux-direct";
-  };
-  services.emacs.enable = false;
+  networking.networkmanager.enable = true;
+  networking.useDHCP = true;
 
   # Enable sound.
   sound.enable = true;
@@ -66,6 +59,4 @@
     zathura
     zellij
   ];
-
-  programs.wireshark.enable = true;
 }
