@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }: {
   imports = [
     ./alacritty
+    ./apple-tethering
     ./bat
     ./boot
     ./fileSystems

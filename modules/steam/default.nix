@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, networking, ... }:
 let inherit (lib) types mkIf mkDefault mkOption;
 in {
   options.my-config = {
@@ -16,5 +16,8 @@ in {
     };
 
     nixpkgs.allowUnfreePackages = [ "steam" "steam-original" "steam-run" ];
+
+    # local share
+    networking.firewall.allowedTCPPorts = [ 24070 ];
   };
 }

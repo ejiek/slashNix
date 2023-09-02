@@ -7,6 +7,11 @@ in {
       type = types.bool;
       default = false;
     };
+    hypr.layout = mkOption {
+      description = "master or dwindle layout";
+      type = types.enum ["dwindle" "master"];
+      default = "master";
+    };
   };
 
   # if my-config.template.desktop.gnome.enable is set to true
@@ -59,7 +64,7 @@ in {
                   follow_mouse = 1
 
                   touchpad {
-                    natural_scroll = no
+                    natural_scroll = true
                   }
 
                   sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
@@ -74,7 +79,7 @@ in {
               col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
               col.inactive_border = rgba(595959aa)
 
-              layout = master
+              layout = ${config.my-config.hypr.layout}
             }
 
             decoration {
@@ -124,7 +129,7 @@ in {
 
             gestures {
               # See https://wiki.hyprland.org/Configuring/Variables/ for more
-              workspace_swipe = off
+              workspace_swipe = true
             }
 
           # Example per-device config

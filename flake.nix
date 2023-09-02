@@ -11,9 +11,10 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, rust-overlay }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, rust-overlay }:
     let
       mkHost = hostName: system:
         (({ my-config, zfs-root, pkgs, system, ... }:
@@ -26,7 +27,7 @@
               # Host specific
               (if (builtins.pathExists
                 ./hosts/${hostName}/configuration.nix) then
-                (import ./hosts/${hostName}/configuration.nix { inherit pkgs; })
+                (import ./hosts/${hostName}/configuration.nix { inherit pkgs nixos-hardware; })
               else
                 { })
 
@@ -68,6 +69,7 @@
     in {
       nixosConfigurations = {
         ePower = mkHost "ePower" "x86_64-linux";
+        eFrame = mkHost "eFrame" "x86_64-linux";
       };
     };
 }
