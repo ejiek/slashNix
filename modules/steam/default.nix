@@ -17,4 +17,6 @@ in {
 
     nixpkgs.allowUnfreePackages = [ "steam" "steam-original" "steam-run" ];
   };
+
+  networking.firewall.allowedTCPPorts = [ 24070 ];
 }
