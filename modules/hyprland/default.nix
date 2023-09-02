@@ -124,7 +124,7 @@ in {
 
             gestures {
               # See https://wiki.hyprland.org/Configuring/Variables/ for more
-              workspace_swipe = off
+              workspace_swipe = true
             }
 
           # Example per-device config
