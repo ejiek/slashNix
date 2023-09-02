@@ -54,6 +54,10 @@ in {
           monitor=,preferred,auto,auto
           monitor=HDMI-A-1,preferred,auto,auto,transform,1
 
+          xwayland {
+            force_zero_scaling = true
+          }
+
           input {
             kb_layout = us,ru
             kb_variant =
