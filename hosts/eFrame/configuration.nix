@@ -19,9 +19,9 @@
   };
 
   services.udev.extraHwdb = ''
-    evdev:atkbd:dmi:bvnINSYDECorp.:bvr*:bd*:br3.6:svnFramework:pnLaptop(12thGenIntelCore):pvr*
-      KEYBOARD_KEY_3a=esc
-      KEYBOARD_KEY_01=capslock
+  evdev:atkbd:dmi:bvn*:bvr*:bd*:svnFramework:pnLaptop*12thGenIntelCore*:pvr*
+    KEYBOARD_KEY_3a=esc
+    KEYBOARD_KEY_01=capslock
   '';
 
   environment.systemPackages = with pkgs; [
