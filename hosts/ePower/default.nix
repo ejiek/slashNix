@@ -35,7 +35,13 @@
     alacritty.enable = true;
     bat.enable = true;
     git.enable = true;
-    hypr.enable = true;
+    hypr = {
+      enable = true;
+      monitors = ''
+        monitor=,preferred,auto,auto
+        monitor=HDMI-A-1,preferred,auto,auto,transform,1
+      '';
+    };
     nvim.enable = true;
     nu.enable = true;
     obsidian.enable = true;

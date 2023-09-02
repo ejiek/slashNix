@@ -12,6 +12,13 @@ in {
       type = types.enum ["dwindle" "master"];
       default = "master";
     };
+    hypr.monitors = mkOption {
+      description = "Monitor setup";
+      type = types.str;
+      default = ''
+        monitor=,preferred,auto,auto
+      '';
+    };
   };
 
   # if my-config.template.desktop.gnome.enable is set to true
@@ -51,8 +58,7 @@ in {
 
         home.file = {
           "./.config/hypr/hyprland.conf".text = ''
-          monitor=,preferred,auto,auto
-          monitor=HDMI-A-1,preferred,auto,auto,transform,1
+          ${config.my-config.hypr.monitors}
 
           xwayland {
             force_zero_scaling = true
