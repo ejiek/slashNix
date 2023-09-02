@@ -29,7 +29,10 @@
     alacritty.enable = true;
     bat.enable = true;
     git.enable = true;
-    hypr.enable = true;
+    hypr = {
+      enable = true;
+      layout = "dwindle";
+    };
     nvim.enable = true;
     nu.enable = true;
     obsidian.enable = true;
