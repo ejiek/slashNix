@@ -33,6 +33,11 @@
     hypr = {
       enable = true;
       layout = "dwindle";
+      monitors = ''
+        monitor=,highres,auto,2
+        env = GDK_SCALE,2
+        env = XCURSOR_SIZE,16
+      '';
     };
     nvim.enable = true;
     nu.enable = true;
