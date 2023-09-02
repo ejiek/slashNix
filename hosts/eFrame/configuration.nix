@@ -14,6 +14,10 @@
     #jack.enable = true;
   };
 
+  services.logind = {
+    powerKey = "ignore";
+  };
+
   environment.systemPackages = with pkgs; [
     bitwarden
     bluetuith
