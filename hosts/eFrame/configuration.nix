@@ -45,7 +45,6 @@
     krita
     kubectl
     lf
-    libimobiledevice
     libwebp
     lolcat
     mattermost-desktop
