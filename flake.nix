@@ -23,7 +23,6 @@
             modules = [
               # Take modules into account
               ./modules
-              nixos-hardware.nixosModules.framework-12th-gen-intel
 
               # Host specific
               (if (builtins.pathExists

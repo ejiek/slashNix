@@ -1,4 +1,7 @@
 { pkgs, nixos-hardware, ... }: {
+  imports = [
+    nixos-hardware.nixosModules.framework-12th-gen-intel
+  ];
 
   # networking.useDHCP = true;
   networking.networkmanager.enable = true;
