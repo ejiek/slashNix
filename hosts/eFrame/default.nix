@@ -27,7 +27,7 @@
 
   my-config = {
     alacritty.enable = true;
-    apple-tethering = true;
+    apple-tethering.enable = true;
     bat.enable = true;
     git.enable = true;
     hypr = {
