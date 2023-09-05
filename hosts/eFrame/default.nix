@@ -8,7 +8,7 @@
   zfs-root = {
     boot = {
       devNodes = "/dev/disk/by-id/";
-      bootDevices = [  "nvme-Samsung_SSD_980_PRO_1TB_S5GXNF0W120109E" ];
+      bootDevices = [ "nvme-Samsung_SSD_990_PRO_2TB_S6Z2NF0W715587R" ];
       immutable = false;
       availableKernelModules = [  "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
       removableEfi = true;
