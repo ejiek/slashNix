@@ -34,8 +34,11 @@ in {
     security.pam.services.swaylock = {};
 
     home-manager.users.ejiek = {
-      home.packages =
-        builtins.attrValues { inherit (pkgs) swaylock grim; };
+      home.packages = with pkgs; [
+        grim
+        hyprland-per-window-layout
+        swaylock
+      ];
 
         gtk = {
           enable = true;
@@ -231,6 +234,9 @@ in {
           bind = ,XF86AudioRaiseVolume, exec, pw-volume change '+5%'
           bind = ,XF86AudioLowerVolume, exec, pw-volume change '-5%'
           bind = ,XF86AudioMute, exec, pw-volume mute toggle
+
+          # Keyboard layout per window
+          exec-once = ${pkgs.hyprland-per-window-layout}/bin/hyprland-per-window-layout
           '';
         };
       };
