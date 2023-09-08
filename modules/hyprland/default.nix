@@ -35,6 +35,7 @@ in {
 
     home-manager.users.ejiek = {
       home.packages = with pkgs; [
+        brightnessctl
         grim
         hyprland-per-window-layout
         swaylock
@@ -234,6 +235,8 @@ in {
           bind = ,XF86AudioRaiseVolume, exec, pw-volume change '+5%'
           bind = ,XF86AudioLowerVolume, exec, pw-volume change '-5%'
           bind = ,XF86AudioMute, exec, pw-volume mute toggle
+          bind = ,XF86MonBrightnessDown, exec, brightnessctl set '5%-'
+          bind = ,XF86MonBrightnessUp, exec, brightnessctl set '+5%'
 
           # Keyboard layout per window
           exec-once = ${pkgs.hyprland-per-window-layout}/bin/hyprland-per-window-layout
