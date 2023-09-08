@@ -38,6 +38,7 @@ in {
         brightnessctl
         grim
         hyprland-per-window-layout
+        hyprpicker
         swaylock
       ];
 
@@ -237,6 +238,9 @@ in {
           bind = ,XF86AudioMute, exec, pw-volume mute toggle
           bind = ,XF86MonBrightnessDown, exec, brightnessctl set '5%-'
           bind = ,XF86MonBrightnessUp, exec, brightnessctl set '+5%'
+
+          # Color picker
+          bind = $mainMod ALT, P, exec, hyprpicker --autocopy --no-fancy
 
           # Keyboard layout per window
           exec-once = ${pkgs.hyprland-per-window-layout}/bin/hyprland-per-window-layout
