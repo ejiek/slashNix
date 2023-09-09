@@ -27,7 +27,7 @@
               # Host specific
               (if (builtins.pathExists
                 ./hosts/${hostName}/configuration.nix) then
-                (import ./hosts/${hostName}/configuration.nix { inherit pkgs nixos-hardware; })
+                (import ./hosts/${hostName}/configuration.nix { inherit pkgs nixos-hardware rust-overlay; })
               else
                 { })
 
