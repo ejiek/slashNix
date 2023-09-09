@@ -13,6 +13,7 @@
       availableKernelModules = [  "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
       removableEfi = true;
       kernelParams = [ ];
+      xone = true;
       sshUnlock = {
         enable = false;
         authorizedKeys = [ ];
