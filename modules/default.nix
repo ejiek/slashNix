@@ -21,6 +21,7 @@
     ./steam
     ./tailscale
     ./unfree
+    ./xone
     ./zathura
     ./zsh
     ];

@@ -13,7 +13,6 @@
       availableKernelModules = [  "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
       removableEfi = true;
       kernelParams = [ ];
-      xone = true;
       sshUnlock = {
         enable = false;
         authorizedKeys = [ ];
@@ -52,6 +51,7 @@
     starship.enable = true;
     steam.enable = true;
     tailscale.enable = true;
+    xone.enable = true;
     zsh.enable = true;
   };
 

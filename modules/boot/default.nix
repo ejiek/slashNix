@@ -63,11 +63,6 @@ in {
         default = [ ];
       };
     };
-    xone = mkOption {
-      description = "Enable dirvers for Xbox One controller (with wireless dongle)";
-      type = types.bool;
-      default = false;
-    };
   };
   config = mkIf (cfg.enable) (mkMerge [
     {
@@ -99,11 +94,6 @@ in {
           zpool export -a
         fi
       '';
-    })
-    ( mkIf cfg.xone {
-        boot.extraModulePackages = with config.boot.kernelPackages; [
-          xone
-        ];
     })
     {
       zfs-root.fileSystems = {
