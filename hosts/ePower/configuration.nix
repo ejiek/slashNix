@@ -56,6 +56,7 @@
     mattermost-desktop
     mpv
     nodejs
+    obs-studio
     pandoc
     pulumi-bin
     pw-volume
