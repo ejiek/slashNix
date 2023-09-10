@@ -3,7 +3,7 @@
     nixos-hardware.nixosModules.framework-12th-gen-intel
     ({ pkgs, ... }: {
       nixpkgs.overlays = [ rust-overlay.overlays.default ];
-      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default pkgs.gcc ];
     })
   ];
 
