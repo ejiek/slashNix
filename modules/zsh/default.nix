@@ -12,7 +12,7 @@ in {
   config = mkIf config.my-config.zsh.enable {
     programs.zsh.enable = true;
     environment.systemPackages = with pkgs; [
-      exa
+      eza
     ];
     home-manager.users.ejiek = {
       programs.zsh = {
@@ -28,8 +28,8 @@ in {
         shellAliases = {
           add-deleted="git status | grep 'deleted' | awk '{ print $2 }' | xargs git add";
           jqp="jq -C | less -R";
-          ls="exa -Slhg --icons";
-          la="exa -Slhga --icons";
+          ls="eza -Slhg --icons";
+          la="eza -Slhga --icons";
           maps="telnet mapscii.me";
           nwitch="sudo nixos-rebuild switch --flake /home/ejiek/.slashNix/flake.nix#e220";
           ntest="sudo nixos-rebuild test --flake /home/ejiek/.slashNix/flake.nix#e220";
