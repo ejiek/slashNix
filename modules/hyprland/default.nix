@@ -175,7 +175,7 @@ in {
           bind = $mainMod, P, exec, rofi-rbw
           bind = $mainMod, E, exec, rofimoji
           bind = $mainMod SHIFT, E, exec, rofi -show emoji
-          bind = $mainMod, C, killactive,
+          bind = $mainMod SHIFT, C, killactive,
           bind = $mainMod SHIFT, Q, exec, swaylock -f -i ~/pictures/lock.jpg
           bind = $mainMod, Q, exec, qutebrowser
           bind = $mainMod SHIFT, F, togglefloating,
