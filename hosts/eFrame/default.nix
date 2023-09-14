@@ -37,6 +37,7 @@
         monitor=,highres,auto,2
         env = GDK_SCALE,2
       '';
+      cursor.size = 24;
     };
     nvim.enable = true;
     nu.enable = true;
