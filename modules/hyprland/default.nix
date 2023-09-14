@@ -19,6 +19,11 @@ in {
         monitor=,preferred,auto,auto
       '';
     };
+    hypr.cursor.size = mkOption {
+      description = "Cursor size";
+      type = types.int;
+      default = 32;
+    };
   };
 
   # if my-config.template.desktop.gnome.enable is set to true
@@ -54,12 +59,18 @@ in {
             package = pkgs.gnome.adwaita-icon-theme;
             name = "Adwaita";
           };
+          cursorTheme = {
+            package = pkgs.nordzy-cursor-theme;
+            name = "Nordzy-cursors";
+            size = config.my-config.hypr.cursor.size;
+          };
         };
 
         home.pointerCursor = {
           package = pkgs.nordzy-cursor-theme;
           name = "Nordzy-cursors";
           gtk.enable = true;
+          size = config.my-config.hypr.cursor.size;
         };
 
         home.file = {
