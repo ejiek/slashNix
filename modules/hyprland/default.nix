@@ -40,6 +40,7 @@ in {
         hyprland-per-window-layout
         hyprpicker
         swaylock
+        wl-clipboard
       ];
 
         gtk = {
