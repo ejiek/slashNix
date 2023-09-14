@@ -65,7 +65,7 @@
         serif = [ "Hack" ];
         sansSerif = [ "Hack" ];
         monospace = [ "FiraCode" ];
-        emoji = [ "Noto Monochrome Emoji" ];
+        emoji = [ "NotoColorEmoji" ];
       };
     };
   };
