@@ -48,6 +48,11 @@ in {
         wl-clipboard
       ];
 
+      home.sessionVariables = {
+        QT_QPA_PLATFORM = "wayland";
+        NIXOS_OZONE_WL = "1";
+      };
+
         gtk = {
           enable = true;
           font = { name = "sans-serif"; };
@@ -71,6 +76,20 @@ in {
           name = "Nordzy-cursors";
           gtk.enable = true;
           size = config.my-config.hypr.cursor.size;
+        };
+
+        home.file = {
+          "./.config/electron25-flags.conf".text = ''
+          --enable-features=WaylandWindowDecorations
+          --ozone-platform-hint=auto
+          '';
+        };
+
+        home.file = {
+          "./.config/electron13-flags.conf".text = ''
+          --enable-features=UseOzonePlatform
+          --ozone-platform=wayland
+          '';
         };
 
         home.file = {
