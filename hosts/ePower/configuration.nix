@@ -1,4 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, rust-overlay, ... }: {
+  imports = [
+    ({ pkgs, ... }: {
+      nixpkgs.overlays = [ rust-overlay.overlays.default ];
+      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default pkgs.gcc ];
+    })
+  ];
+
   networking.useDHCP = true;
   networking.networkmanager.enable = false;
 
