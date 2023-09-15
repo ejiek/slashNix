@@ -13,7 +13,7 @@ There might be serious idiomatic & structural flaws.
 
 ## Roadmap
 
-- [ ] Make repo usable by multiple machines (see [Wimpy's repo](https://github.com/wimpysworld/nix-config))
+- [x] Make repo usable by multiple machines (see [Wimpy's repo](https://github.com/wimpysworld/nix-config))
 - [ ] Adopt encryption or a way to store secrets separately (see [agenix](https://github.com/ryantm/agenix))
 - [ ] Document the way(s) this repo is used
 
