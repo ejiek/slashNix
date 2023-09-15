@@ -44,7 +44,9 @@ in {
         grim
         hyprland-per-window-layout
         hyprpicker
+        notify-desktop
         swaylock
+        swaynotificationcenter
         wl-clipboard
       ];
 
@@ -272,6 +274,11 @@ in {
 
           # Color picker
           bind = $mainMod ALT, P, exec, hyprpicker --autocopy --no-fancy
+
+          # Notifications
+          exec-once = ${pkgs.swaynotificationcenter}/bin/swaync
+          bind = $mainMod, N, exec, swaync-client --toggle-panel
+          bind = $mainMod, D, exec, swaync-client --toggle-dnd
 
           # Keyboard layout per window
           exec-once = ${pkgs.hyprland-per-window-layout}/bin/hyprland-per-window-layout
