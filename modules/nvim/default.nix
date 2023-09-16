@@ -143,6 +143,7 @@ in {
             '';
           }
           vim-nix
+          vim-plugin-AnsiEsc
           vim-table-mode
           yankring
           {
