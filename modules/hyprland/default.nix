@@ -43,6 +43,7 @@ in {
         brightnessctl
         grim
         hyprland-per-window-layout
+        hyprpaper
         hyprpicker
         notify-desktop
         swaylock
@@ -282,6 +283,17 @@ in {
 
           # Keyboard layout per window
           exec-once = ${pkgs.hyprland-per-window-layout}/bin/hyprland-per-window-layout
+
+          # Wallpaper
+          exec-once = ${pkgs.hyprpaper}/bin/hyprpaper
+          '';
+        };
+
+        home.file = {
+          "./.config/hypr/hyprpaper.conf".text = ''
+            ipc = off
+            preload = /home/ejiek/pictures/bg.jpg
+            wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
           '';
         };
       };
