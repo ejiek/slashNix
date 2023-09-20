@@ -41,11 +41,12 @@ in {
     home-manager.users.ejiek = {
       home.packages = with pkgs; [
         brightnessctl
-        grim
+        grim # take screenshots
         hyprland-per-window-layout
         hyprpaper
         hyprpicker
         notify-desktop
+        slurp # Select a region in a Wayland compositor | used for screenshots
         swaylock
         swaynotificationcenter
         wl-clipboard
@@ -276,6 +277,12 @@ in {
           # Color picker
           bind = $mainMod ALT, P, exec, hyprpicker --autocopy --no-fancy
 
+          # Screenshots
+          bind = $mainMod, S, exec, TO_FILE=false FULL_SCREEN=true ~/.config/hypr/screenshot.sh
+          bind = $mainMod ALT, S, exec, TO_FILE=true FULL_SCREEN=true ~/.config/hypr/screenshot.sh
+          bind = $mainMod SHIFT, S, exec, TO_FILE=false FULL_SCREEN=false ~/.config/hypr/screenshot.sh
+          bind = $mainMod SHIFT ALT, S, exec, TO_FILE=true FULL_SCREEN=false ~/.config/hypr/screenshot.sh
+
           # Notifications
           exec-once = ${pkgs.swaynotificationcenter}/bin/swaync
           bind = $mainMod, N, exec, swaync-client --toggle-panel
@@ -295,6 +302,17 @@ in {
             preload = /home/ejiek/pictures/bg.jpg
             wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
           '';
+        };
+
+        #home.activation.screenshotActication = home-manager.dag.entryAfter ["WriteBoundary"] ''
+        #  chmod +x ~/.config/hypr/screenshot.sh
+        #'';
+
+        home.file = {
+          "wl-screenshot" = {
+            target = ".config/hypr/screenshot.sh";
+            source = ./screenshot.sh;
+          };
         };
       };
     };
