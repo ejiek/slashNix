@@ -13,6 +13,7 @@ in {
     programs.zsh.enable = true;
     environment.systemPackages = with pkgs; [
       eza
+      fx
     ];
     home-manager.users.ejiek = {
       programs.zsh = {
