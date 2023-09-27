@@ -168,6 +168,7 @@ in {
               }
             '';
           }
+          nvim-treesitter-parsers.astro
           nvim-treesitter-parsers.bash
           nvim-treesitter-parsers.css
           nvim-treesitter-parsers.dockerfile
@@ -277,6 +278,7 @@ in {
               end)
 
               lsp.setup_servers({
+                'astro',
                 'tsserver',
                 'eslint',
                 'rust_analyzer',
@@ -308,6 +310,7 @@ in {
         fzf
         ripgrep
         # language servers
+        nodePackages."@astrojs/language-server"
         nodePackages.typescript-language-server
         nodePackages.eslint
         rust-analyzer
