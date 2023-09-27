@@ -46,6 +46,7 @@
     fira-code
     fira-mono
     firefox
+    fluffychat
     gh
     gimp
     go
