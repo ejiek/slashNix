@@ -15,7 +15,7 @@ in {
       remotePlay.openFirewall = true;
     };
 
-    programs.gamescope.enable = true;
+    programs.gamemode.enable = true;
 
     nixpkgs.allowUnfreePackages = [ "steam" "steam-original" "steam-run" ];
 
