@@ -81,6 +81,8 @@ in {
 
           set spell spelllang=en,ru
 
+          " Disable mouse support
+          set mouse=
 
           " Better window navigation
           nnoremap <C-h> <C-w>h
