@@ -15,6 +15,8 @@ in {
       remotePlay.openFirewall = true;
     };
 
+    programs.gamescope.enable = true;
+
     nixpkgs.allowUnfreePackages = [ "steam" "steam-original" "steam-run" ];
 
     # local share
