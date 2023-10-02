@@ -96,6 +96,10 @@ in {
           c.editor.command = ['alacritty', '-e', 'vim', '{}']
           c.editor.encoding = 'utf-8'
 
+          c.url.start_pages = 'qute://start'
+          c.url.default_page = 'qute://start'
+          c.url.open_base_url = True
+
           c.downloads.location.directory = '~/downvotes'
           c.downloads.location.prompt = False
 
