@@ -3,6 +3,7 @@
     ./alacritty
     ./apple-tethering
     ./bat
+    ./bluetooth
     ./boot
     ./fileSystems
     ./git

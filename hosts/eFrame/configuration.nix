@@ -38,7 +38,6 @@
 
   environment.systemPackages = with pkgs; [
     bitwarden
-    bluetuith
     chromium
     cider
     figlet

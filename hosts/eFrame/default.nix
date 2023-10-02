@@ -29,6 +29,7 @@
     alacritty.enable = true;
     apple-tethering.enable = true;
     bat.enable = true;
+    bluetooth.enable = true;
     git.enable = true;
     hypr = {
       enable = true;
