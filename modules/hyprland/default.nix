@@ -29,6 +29,11 @@ in {
       type = types.int;
       default = 32;
     };
+    hypr.extraConfig = mkOption {
+      description = "Extra config";
+      type = types.str;
+      default = "";
+    };
   };
 
   # if my-config.template.desktop.gnome.enable is set to true
@@ -272,6 +277,7 @@ in {
             "${pkgs.hyprpaper}/bin/hyprpaper"
           ];
         };
+        extraConfig = config.my-config.hypr.extraConfig;
       };
 
       home.file = {

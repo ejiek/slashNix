@@ -34,11 +34,11 @@
     hypr = {
       enable = true;
       layout = "dwindle";
-      monitors = ''
-        monitor=,highres,auto,2
-        env = GDK_SCALE,2
-      '';
+      monitors = [
+        "monitor=,highres,auto,2"
+      ];
       cursor.size = 24;
+      extraConfig = "env = GDK_SCALE,2";
     };
     nvim.enable = true;
     nu.enable = true;
