@@ -182,7 +182,7 @@ in {
             "$mainMod, Return, exec, alacritty"
             "$mainMod, Space, exec, rofi -show drun"
             "$mainMod, P, exec, rofi-rbw"
-            "$mainMod SHIFT, P, exec, rofi -show emoji"
+            "$mainMod, E, exec, rofimoji"
             "$mainMod SHIFT, E, exec, rofi -show emoji"
             "$mainMod SHIFT, C, killactive,"
             "$mainMod SHIFT, Q, exec, swaylock -f -i ~/pictures/lock.jpg"
