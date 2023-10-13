@@ -19,6 +19,11 @@ in {
         ",preferred,auto,auto"
       ];
     };
+    hypr.workspaces = mkOption {
+      description = "Workspaces setup";
+      type = types.listOf types.str;
+      default = [ ];
+    };
     hypr.cursor.size = mkOption {
       description = "Cursor size";
       type = types.int;
@@ -117,6 +122,8 @@ in {
           gestures = {
             workspace_swipe = true;
           };
+
+          workspace = config.my-config.hypr.workspaces;
 
           general = {
             gaps_in = 5;

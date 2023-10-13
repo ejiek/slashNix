@@ -41,6 +41,18 @@
         ",preferred,auto,auto"
         "HDMI-A-1,preferred,auto,auto,transform,1"
       ];
+      workspaces = [
+        "1, monitor:DP-2, default:true"
+        "2, monitor:DP-2"
+        "3, monitor:DP-2"
+        "4, monitor:DP-2"
+        "5, monitor:DP-2"
+        "6, monitor:DP-2"
+        "7, monitor:DP-2"
+        "8, monitor:HDMI-A-1"
+        "9, monitor:HDMI-A-1"
+        "10, monitor:HDMI-A-1, default:true"
+      ];
     };
     nvim.enable = true;
     nu.enable = true;
