@@ -51,44 +51,44 @@ in {
         NIXOS_OZONE_WL = "1";
       };
 
-        gtk = {
-          enable = true;
-          font = { name = "sans-serif"; };
-          theme = {
-            name = "Adwaita";
-            package = pkgs.gnome.gnome-themes-extra;
-          };
-          iconTheme = {
-            package = pkgs.gnome.adwaita-icon-theme;
-            name = "Adwaita";
-          };
-          cursorTheme = {
-            package = pkgs.nordzy-cursor-theme;
-            name = "Nordzy-cursors";
-            size = config.my-config.hypr.cursor.size;
-          };
+      gtk = {
+        enable = true;
+        font = { name = "sans-serif"; };
+        theme = {
+          name = "Adwaita";
+          package = pkgs.gnome.gnome-themes-extra;
         };
-
-        home.pointerCursor = {
+        iconTheme = {
+          package = pkgs.gnome.adwaita-icon-theme;
+          name = "Adwaita";
+        };
+        cursorTheme = {
           package = pkgs.nordzy-cursor-theme;
           name = "Nordzy-cursors";
-          gtk.enable = true;
           size = config.my-config.hypr.cursor.size;
         };
+      };
 
-        home.file = {
-          "./.config/electron25-flags.conf".text = ''
-          --enable-features=WaylandWindowDecorations
-          --ozone-platform-hint=auto
-          '';
-        };
+      home.pointerCursor = {
+        package = pkgs.nordzy-cursor-theme;
+        name = "Nordzy-cursors";
+        gtk.enable = true;
+        size = config.my-config.hypr.cursor.size;
+      };
 
-        home.file = {
-          "./.config/electron13-flags.conf".text = ''
-          --enable-features=UseOzonePlatform
-          --ozone-platform=wayland
-          '';
-        };
+      home.file = {
+        "./.config/electron25-flags.conf".text = ''
+        --enable-features=WaylandWindowDecorations
+        --ozone-platform-hint=auto
+        '';
+      };
+
+      home.file = {
+        "./.config/electron13-flags.conf".text = ''
+        --enable-features=UseOzonePlatform
+        --ozone-platform=wayland
+        '';
+      };
 
       # TODO: take a look at https://github.com/Duckonaut/split-monitor-workspaces
       wayland.windowManager.hyprland = {
@@ -178,7 +178,7 @@ in {
             "$mainMod SHIFT, F, togglefloating,"
             "$mainMod, F, fullscreen, 0"
 
-             # Move windows
+            # Move windows
             "$mainMod SHIFT, H, swapwindow, l"
             "$mainMod SHIFT, L, swapwindow, r"
             "$mainMod SHIFT, K, swapwindow, u"
@@ -198,7 +198,7 @@ in {
             "$mainMod SHIFT, I, movewindow, mon:l"
             "$mainMod SHIFT, O, movewindow, mon:r"
 
-             # Switch workspaces with mainMod + [0-9]
+            # Switch workspaces with mainMod + [0-9]
             "$mainMod, 1, workspace, 1"
             "$mainMod, 2, workspace, 2"
             "$mainMod, 3, workspace, 3"
@@ -247,7 +247,9 @@ in {
             "$mainMod, D, exec, swaync-client --toggle-dnd"
 
           ];
-          bindm = [  # Move/resize windows with mainMod + LMB/RMB and dragging
+
+          # Move/resize windows with mainMod + LMB/RMB and dragging
+          bindm = [
             "$mainMod, mouse:272, movewindow"
             "$mainMod, mouse:273, resizewindow"
           ];
@@ -265,13 +267,13 @@ in {
         };
       };
 
-        home.file = {
-          "./.config/hypr/hyprpaper.conf".text = ''
-            ipc = off
-            preload = /home/ejiek/pictures/bg.jpg
-            wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
-          '';
-        };
+      home.file = {
+        "./.config/hypr/hyprpaper.conf".text = ''
+        ipc = off
+        preload = /home/ejiek/pictures/bg.jpg
+        wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
+        '';
+      };
 
         #home.activation.screenshotActication = home-manager.dag.entryAfter ["WriteBoundary"] ''
         #  chmod +x ~/.config/hypr/screenshot.sh
