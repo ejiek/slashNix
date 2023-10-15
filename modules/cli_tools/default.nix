@@ -10,7 +10,7 @@ in {
   };
 
   config = mkIf config.my-config.cli_tools.enable {
-    environment.systemPackages = with pkgs [
+    environment.systemPackages = with pkgs; [
       figlet
       gh
       gomuks
@@ -23,6 +23,6 @@ in {
       wget
       yt-dlp
       zellij
-    ]
+    ];
   };
 }
