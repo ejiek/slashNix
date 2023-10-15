@@ -46,39 +46,27 @@
     fira-mono
     firefox
     fluffychat
-    gh
     gimp
     go
-    gomuks
     helix
     inkscape
     k9s
     kind
     krita
     kubectl
-    lf
     libwebp
-    lolcat
     mattermost-desktop
     mpv
     nodejs
     pandoc
     pulumi-bin
     pw-volume
-    ripgrep
-    stow
     tdesktop
-    tmate
     transmission
     trivy
-    vhs
     virt-manager
-    wget
     wireshark
     wluma
     xdg-utils
-    yt-dlp
-    zathura
-    zellij
   ];
 }

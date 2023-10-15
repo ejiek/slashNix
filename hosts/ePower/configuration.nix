@@ -39,26 +39,20 @@
     bitwarden
     chromium
     cider
-    figlet
     fira
     fira-code
     fira-mono
     firefox
-    gh
     gimp
     go
-    gomuks
-    hdparm
     helix
     inkscape
     k9s
     kind
     krita
     kubectl
-    lf
     libimobiledevice
     libwebp
-    lolcat
     mattermost-desktop
     mpv
     nodejs
@@ -66,19 +60,12 @@
     pandoc
     pulumi-bin
     pw-volume
-    ripgrep
-    stow
     tdesktop
-    tmate
     transmission
     trivy
-    vhs
     virt-manager
-    wget
     wireshark
     xdg-utils
-    yt-dlp
-    zellij
   ];
 
   programs.wireshark.enable = true;

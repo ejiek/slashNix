@@ -5,6 +5,7 @@
     ./bat
     ./bluetooth
     ./boot
+    ./cli_tools
     ./fileSystems
     ./git
     ./hyprland

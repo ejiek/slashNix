@@ -34,6 +34,7 @@
   my-config = {
     alacritty.enable = true;
     bat.enable = true;
+    cli_tools.enable = true;
     git.enable = true;
     hypr = {
       enable = true;
