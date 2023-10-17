@@ -14,58 +14,34 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, rust-overlay }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, rust-overlay }@inputs:
     let
       mkHost = hostName: system:
-        (({ my-config, zfs-root, pkgs, system, ... }:
           nixpkgs.lib.nixosSystem {
             inherit system;
+            pkgs = import nixpkgs {
+              config.allowUnfree = true;
+            };
+
+            specialArgs = {
+              inherit rust-overlay inputs;
+            };
             modules = [
-              # Take modules into account
               ./modules
 
+              # Shared by all hosts
+              ./configuration.nix
+
               # Host specific
-              (if (builtins.pathExists
-                ./hosts/${hostName}/configuration.nix) then
-                (import ./hosts/${hostName}/configuration.nix { inherit pkgs nixos-hardware rust-overlay; })
-              else
-                { })
+              ./hosts/${hostName}
 
-              # Entry point
-              (({ my-config, zfs-root, pkgs, lib, ... }: {
-                inherit my-config zfs-root;
-                system.configurationRevision = if (self ? rev) then
-                  self.rev
-                else
-                  throw "refuse to build: git tree is dirty";
-                system.stateVersion = "23.05";
-                imports = [
-                  "${nixpkgs}/nixos/modules/installer/scan/not-detected.nix"
-                  # "${nixpkgs}/nixos/modules/profiles/hardened.nix"
-                  # "${nixpkgs}/nixos/modules/profiles/qemu-guest.nix"
-                ];
-              }) {
-                inherit my-config zfs-root pkgs;
-                lib = nixpkgs.lib;
-              })
-
-              # home-manager
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
               }
-
-              # Shared config
-              (import ./configuration.nix { inherit pkgs; })
             ];
-          })
-
-        # configuration input
-          (import ./hosts/${hostName} {
-            system = system;
-            pkgs = nixpkgs.legacyPackages.${system};
-          }));
+          };
     in {
       nixosConfigurations = {
         ePower = mkHost "ePower" "x86_64-linux";

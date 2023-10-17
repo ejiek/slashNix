@@ -1,6 +1,8 @@
 # configuration in this file is shared by all hosts
 
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }:
+let inherit (inputs) self;
+in {
 
   users.users = {
     root = {
@@ -70,7 +72,14 @@
     };
   };
 
-  #nixpkgs.config.allowUnfree = false;
+  system.configurationRevision = if (self ? rev) then
+    self.rev
+  else
+    throw "refuse to build: git tree is dirty";
+
+  system.stateVersion = "23.05";
+  # let nix commands follow system nixpkgs revision
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
   networking.nftables.enable = true;
   networking.firewall.enable = true;

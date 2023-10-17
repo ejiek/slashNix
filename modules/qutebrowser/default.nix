@@ -13,7 +13,7 @@ in {
     nixpkgs.overlays = [
       (final: prev: { qutebrowser = prev.qutebrowser.override { enableWideVine = true; }; })
     ];
-    nixpkgs.allowUnfreePackages = [ "widevine-cdm" ];
+    pkgs.allowUnfreePackages = [ "widevine-cdm" ];
 
     home-manager.users.ejiek = {
       programs.qutebrowser = {

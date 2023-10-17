@@ -1,10 +1,4 @@
-# only my-config.* and zfs-root.* options can be defined in this file.
-#
-# all others goes to `configuration.nix` under the same directory as
-# this file.
-
-{ system, pkgs, ... }: {
-  inherit pkgs system;
+{ config, pkgs, lib, inputs, rust-overlay, modulePath, ... }: {
   zfs-root = {
     boot = {
       devNodes = "/dev/disk/by-id/";
@@ -59,4 +53,76 @@
   };
 
   security.polkit.enable = true;
+
+  # networking.useDHCP = true;
+  networking.networkmanager.enable = true;
+
+  # Enable sound.
+  sound.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+  };
+
+  services.logind = {
+    powerKey = "ignore";
+  };
+
+  services.udev.extraHwdb = ''
+  evdev:atkbd:dmi:bvn*:bvr*:bd*:svnFramework:pnLaptop*12thGenIntelCore*:pvr*
+    KEYBOARD_KEY_3a=esc
+    KEYBOARD_KEY_01=capslock
+  '';
+
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    bitwarden
+    chromium
+    cider
+    figlet
+    fira
+    fira-code
+    fira-mono
+    firefox
+    fluffychat
+    gimp
+    go
+    helix
+    inkscape
+    k9s
+    kind
+    krita
+    kubectl
+    libwebp
+    mattermost-desktop
+    mpv
+    nodejs
+    pandoc
+    pulumi-bin
+    pw-volume
+    tdesktop
+    transmission
+    trivy
+    virt-manager
+    wireshark
+    wluma
+    xdg-utils
+  ];
+
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+    nixos-hardware.nixosModules.framework-12th-gen-intel
+    ({ pkgs, ... }: {
+      nixpkgs.overlays = [ rust-overlay.overlays.default ];
+      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default pkgs.gcc ];
+    })
+  ];
 }

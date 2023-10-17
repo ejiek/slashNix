@@ -1,12 +1,4 @@
-# configuration in this file only applies to exampleHost host
-#
-# only my-config.* and zfs-root.* options can be defined in this file.
-#
-# all others goes to `configuration.nix` under the same directory as
-# this file. 
-
-{ system, pkgs, ... }: {
-  inherit pkgs system;
+{ config, pkgs, lib, inputs, rust-overlay, modulesPath, ... }:{
   zfs-root = {
     boot = {
       devNodes = "/dev/disk/by-id/";
@@ -71,4 +63,76 @@
     zathura.enable = true;
     zsh.enable = true;
   };
+
+  networking.useDHCP = true;
+  networking.networkmanager.enable = false;
+
+  # configuration in this file only applies to exampleHost host.
+  programs.tmux = {
+    enable = true;
+    newSession = true;
+    terminal = "tmux-direct";
+  };
+  services.emacs.enable = false;
+
+  # Enable sound.
+  sound.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+  };
+
+  services.fwupd.enable = true;
+
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    bitwarden
+    chromium
+    cider
+    fira
+    fira-code
+    fira-mono
+    firefox
+    gimp
+    go
+    helix
+    inkscape
+    k9s
+    kind
+    krita
+    kubectl
+    libimobiledevice
+    libwebp
+    mattermost-desktop
+    mpv
+    nodejs
+    obs-studio
+    pandoc
+    pulumi-bin
+    pw-volume
+    tdesktop
+    transmission
+    trivy
+    virt-manager
+    wireshark
+    xdg-utils
+  ];
+
+  programs.wireshark.enable = true;
+
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+    ({ pkgs, ... }: {
+      nixpkgs.overlays = [ rust-overlay.overlays.default ];
+      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default pkgs.gcc ];
+    })
+  ];
 }

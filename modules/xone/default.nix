@@ -14,6 +14,6 @@ in {
     boot.extraModulePackages = with config.boot.kernelPackages; [
       xone
     ];
-    nixpkgs.allowUnfreePackages = [ "xow_dongle-firmware" ];
+    pkgs.allowUnfreePackages = [ "xow_dongle-firmware" ];
   };
 }

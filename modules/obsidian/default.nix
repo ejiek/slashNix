@@ -11,6 +11,6 @@ in {
 
   config = mkIf config.my-config.obsidian.enable {
     environment.systemPackages = with pkgs; [ obsidian ];
-    nixpkgs.allowUnfreePackages = [ "obsidian" ];
+    pkgs.allowUnfreePackages = [ "obsidian" ];
   };
 }
