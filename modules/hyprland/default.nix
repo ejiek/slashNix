@@ -42,6 +42,18 @@ in {
     security.pam.services.swaylock = {};
 
     programs.dconf.enable = true;
+
+    # Enable sound.
+    sound.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+    };
+
     home-manager.users.ejiek = {
       home.packages = with pkgs; [
         brightnessctl
@@ -50,9 +62,11 @@ in {
         hyprpaper
         hyprpicker
         notify-desktop
+        pulsemixer
         slurp # Select a region in a Wayland compositor | used for screenshots
         swaylock
         swaynotificationcenter
+        wireplumber
         wl-clipboard
       ];
 
@@ -239,9 +253,10 @@ in {
             "$mainMod, mouse_up, workspace, e-1"
 
             # Media keys
-            ",XF86AudioRaiseVolume, exec, pw-volume change '+5%'"
-            ",XF86AudioLowerVolume, exec, pw-volume change '-5%'"
-            ",XF86AudioMute, exec, pw-volume mute toggle"
+            ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+            ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+            ",XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ toggle"
+            "$mainMod, M, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
             ",XF86MonBrightnessDown, exec, brightnessctl set '5%-'"
             ",XF86MonBrightnessUp, exec, brightnessctl set '+5%'"
 
