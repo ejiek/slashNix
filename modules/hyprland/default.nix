@@ -72,18 +72,24 @@ in {
     home-manager.users.ejiek = {
       home.packages = with pkgs; [
         brightnessctl
-        grim # take screenshots
         hyprland-per-window-layout
         hyprpaper
         hyprpicker
         notify-desktop
         pulsemixer
-        slurp # Select a region in a Wayland compositor | used for screenshots
         swaylock
         swaynotificationcenter
         wireplumber
         wl-clipboard
         xdg-utils
+        (writeShellApplication {
+          name = "hypr-screenshot";
+          runtimeInputs = [
+            slurp # Select a region in a Wayland compositor | used for screenshots
+            grim # take screenshots
+          ];
+          text = (builtins.readFile ./screenshot.sh);
+        })
       ];
 
       home.sessionVariables = {
@@ -280,10 +286,10 @@ in {
             "$mainMod ALT, P, exec, hyprpicker --autocopy --no-fancy"
 
             # Screenshots
-            "$mainMod, S, exec, TO_FILE=false FULL_SCREEN=true ~/.config/hypr/screenshot.sh"
-            "$mainMod ALT, S, exec, TO_FILE=true FULL_SCREEN=true ~/.config/hypr/screenshot.sh"
-            "$mainMod SHIFT, S, exec, TO_FILE=false FULL_SCREEN=false ~/.config/hypr/screenshot.sh"
-            "$mainMod SHIFT ALT, S, exec, TO_FILE=true FULL_SCREEN=false ~/.config/hypr/screenshot.sh"
+            "$mainMod, S, exec, TO_FILE=false FULL_SCREEN=true hypr-screenshot"
+            "$mainMod ALT, S, exec, TO_FILE=true FULL_SCREEN=true hypr-screenshot"
+            "$mainMod SHIFT, S, exec, TO_FILE=false FULL_SCREEN=false hypr-screenshot"
+            "$mainMod SHIFT ALT, S, exec, TO_FILE=true FULL_SCREEN=false hypr-screenshot"
 
             # Notifications
             "$mainMod, N, exec, swaync-client --toggle-panel"
@@ -319,16 +325,6 @@ in {
         '';
       };
 
-        #home.activation.screenshotActication = home-manager.dag.entryAfter ["WriteBoundary"] ''
-        #  chmod +x ~/.config/hypr/screenshot.sh
-        #'';
-
-        home.file = {
-          "wl-screenshot" = {
-            target = ".config/hypr/screenshot.sh";
-            source = ./screenshot.sh;
-          };
-        };
       };
     };
   }

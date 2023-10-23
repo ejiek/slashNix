@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Takes a screenshot in four different ways
 # Behavior is determined by defining the following environmental variables
 #
