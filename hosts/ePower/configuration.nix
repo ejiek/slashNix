@@ -53,7 +53,6 @@
     trivy
     virt-manager
     wireshark
-    xdg-utils
   ];
 
   programs.wireshark.enable = true;

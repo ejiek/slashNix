@@ -55,6 +55,5 @@
     virt-manager
     wireshark
     wluma
-    xdg-utils
   ];
 }
