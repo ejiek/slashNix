@@ -104,6 +104,7 @@ in {
           c.downloads.location.prompt = False
 
           c.content.notifications.enabled = False
+          c.content.fullscreen.window = True
 
           # Gruvbox light colours
           c.colors.completion.fg = '#3c3836'
