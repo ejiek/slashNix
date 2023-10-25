@@ -64,7 +64,7 @@
       defaultFonts = {
         serif = [ "Hack" ];
         sansSerif = [ "Hack" ];
-        monospace = [ "FiraCode" ];
+        monospace = [ "FiraCode Nerd Font Mono" ];
         emoji = [ "NotoColorEmoji" ];
       };
     };
