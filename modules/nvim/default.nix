@@ -118,6 +118,13 @@ in {
             '';
           }
           {
+            plugin = comment-nvim;
+            type = "lua";
+            config = ''
+              require('Comment').setup()
+            '';
+          }
+          {
             plugin = copilot-lua;
             type = "lua";
             config = ''
