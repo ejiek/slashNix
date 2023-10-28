@@ -15,7 +15,6 @@ in {
       gh
       gomuks
       hdparm
-      joshuto
       lolcat
       ripgrep
       tmate

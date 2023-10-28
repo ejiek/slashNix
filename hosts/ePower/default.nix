@@ -55,6 +55,7 @@
         "10, monitor:HDMI-A-1, default:true"
       ];
     };
+    joshuto.enable = true;
     nvim.enable = true;
     nu.enable = true;
     obsidian.enable = true;

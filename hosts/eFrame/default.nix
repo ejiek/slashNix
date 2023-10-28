@@ -41,6 +41,7 @@
       cursor.size = 24;
       extraConfig = "env = GDK_SCALE,2";
     };
+    joshuto.enable = true;
     nvim.enable = true;
     nu.enable = true;
     obsidian.enable = true;

@@ -9,6 +9,7 @@
     ./fileSystems
     ./git
     ./hyprland
+    ./joshuto
     ./networking
     ./nu
     ./nvim
