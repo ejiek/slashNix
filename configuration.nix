@@ -1,6 +1,10 @@
 # configuration in this file is shared by all hosts
 
-{ pkgs, ... }: {
+{
+  inputs,
+  lib,
+  pkgs,
+  ... }: {
 
   users.users = {
     root = {
@@ -39,7 +43,24 @@
 
   boot.zfs.forceImportRoot = false;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+
+    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+
+    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") pkgs.config.nix.registry;
+
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+
+      keep-outputs = true;
+      keep-derivations = true;
+    };
+  };
 
   programs.git.enable = true;
 

@@ -14,7 +14,13 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, rust-overlay }:
+  outputs = { self
+            , nixpkgs
+            , home-manager
+            , nixos-hardware
+            , rust-overlay
+            , ...
+            } @ inputs:
     let
       mkHost = hostName: system:
         (({ my-config, zfs-root, pkgs, system, ... }:
@@ -57,7 +63,10 @@
               }
 
               # Shared config
-              (import ./configuration.nix { inherit pkgs; })
+              (import ./configuration.nix {
+                inherit pkgs inputs;
+                lib = nixpkgs.lib;
+              })
             ];
           })
 
