@@ -26,6 +26,7 @@
 
   environment.systemPackages = with pkgs; [
     bitwarden
+    calibre
     chromium
     cider
     fira
