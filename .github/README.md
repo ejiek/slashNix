@@ -20,6 +20,7 @@ There might be serious idiomatic & structural flaws.
 General:
 
 - [x] Make repo usable by multiple machines (see [Wimpy's repo](https://github.com/wimpysworld/nix-config))
+- [x] Make usable for non ZFS machines
 - [ ] Adopt encryption or a way to store secrets separately (see [agenix](https://github.com/ryantm/agenix))
 - [ ] Document the way(s) this repo is used
 
