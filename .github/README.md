@@ -7,11 +7,17 @@ There might be serious idiomatic & structural flaws.
 | Machine       | System        | Status |
 | --            | --            | --     |
 | Desktop       | NixOS         | Done   |
-| Laptop        | NixOs         | WIP    |
+| Framework 13  | NixOS         | Done   |
+| ThinkPad x220 | NixOs         | WIP    |
 | SteamDeck     | SteamOS + Nix | WIP    |
 | PinePhone Pro | NixOS         | TBD    |
 
 ## Roadmap
+
+- Universal navigation for Hyprland & nvim ([vim-hypr-nav](https://github.com/nuchs/vim-hypr-nav))
+- "Legacy" nix commands follow this flake (registry + channels)
+
+General:
 
 - [x] Make repo usable by multiple machines (see [Wimpy's repo](https://github.com/wimpysworld/nix-config))
 - [ ] Adopt encryption or a way to store secrets separately (see [agenix](https://github.com/ryantm/agenix))
