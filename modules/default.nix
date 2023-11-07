@@ -13,6 +13,7 @@
     ./networking
     ./nu
     ./nvim
+    ./obs
     ./obsidian
     ./opentabletdriver
     ./pass
