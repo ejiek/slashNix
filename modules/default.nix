@@ -21,6 +21,7 @@
     ./qutebrowser
     ./rbw
     ./rofi
+    ./spotify
     ./starship
     ./steam
     ./tailscale

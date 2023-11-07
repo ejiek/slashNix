@@ -67,6 +67,7 @@
     rbw.enable = true;
     rofi.enable = true;
     qutebrowser.enable = true;
+    spotify.enable = true;
     starship.enable = true;
     steam.enable = true;
     tailscale.enable = true;
