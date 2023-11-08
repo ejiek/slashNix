@@ -34,6 +34,15 @@ in {
       type = types.str;
       default = "";
     };
+    hypr.paperConfig = mkOption {
+      description = "Wallpapers setup";
+      type = types.str;
+      default = ''
+        ipc = off
+        preload = /home/ejiek/pictures/bg.jpg
+        wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
+        '';
+    };
   };
 
   # if my-config.template.desktop.gnome.enable is set to true
@@ -318,11 +327,7 @@ in {
       };
 
       home.file = {
-        "./.config/hypr/hyprpaper.conf".text = ''
-        ipc = off
-        preload = /home/ejiek/pictures/bg.jpg
-        wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
-        '';
+        "./.config/hypr/hyprpaper.conf".text = config.my-config.hypr.paperConfig;
       };
 
       };

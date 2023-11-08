@@ -55,6 +55,13 @@
         "9, monitor:HDMI-A-1"
         "10, monitor:HDMI-A-1, default:true"
       ];
+      paperConfig = ''
+        ipc = off
+        preload = /home/ejiek/pictures/bg.jpg
+        preload = /home/ejiek/pictures/bg-right.jpg
+        wallpaper = DP-2,contain:/home/ejiek/pictures/bg.jpg
+        wallpaper = HDMI-A-1,contain:/home/ejiek/pictures/bg-right.jpg
+      '';
     };
     joshuto.enable = true;
     nvim.enable = true;
