@@ -232,8 +232,9 @@ in {
             "$mainMod SHIFT, C, killactive,"
             "$mainMod SHIFT, Q, exec, swaylock -f -i ~/pictures/lock.jpg"
             "$mainMod, Q, exec, qutebrowser"
-            "$mainMod SHIFT, F, togglefloating,"
+            "$mainMod ALT, F, togglefloating,"
             "$mainMod, F, fullscreen, 0"
+            "$mainMod SHIFT, F, fakefullscreen"
 
             # Move windows
             "$mainMod SHIFT, H, swapwindow, l"
