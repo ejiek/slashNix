@@ -21,6 +21,7 @@
     ./qutebrowser
     ./rbw
     ./rofi
+    ./rustdesk
     ./spotify
     ./starship
     ./steam
