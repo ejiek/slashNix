@@ -199,6 +199,13 @@ in {
           nvim-treesitter-parsers.toml
           nvim-treesitter-parsers.typescript
           nvim-treesitter-parsers.yaml
+          {
+            plugin = nvim-ts-autotag;
+            type = "lua";
+            config = ''
+              require('nvim-ts-autotag').setup()
+            '';
+          }
 	  {
 	    plugin = nvim-colorizer-lua;
 	    type = "lua";
