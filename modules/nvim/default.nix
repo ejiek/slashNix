@@ -165,6 +165,13 @@ in {
             '';
           }
           {
+            plugin = nvim-surround;
+            type = "lua";
+            config = ''
+              require('nvim-surround').setup()
+            '';
+          }
+          {
             plugin = nvim-treesitter;
             type = "lua";
             config = ''
