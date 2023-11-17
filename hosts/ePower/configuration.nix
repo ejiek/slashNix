@@ -35,6 +35,7 @@
     firefox
     gimp
     go
+    google-drive-ocamlfuse
     helix
     inkscape
     k9s
