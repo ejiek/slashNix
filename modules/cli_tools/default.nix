@@ -15,6 +15,7 @@ in {
       gh
       gomuks
       hdparm
+      ldns
       lolcat
       ripgrep
       tmate
