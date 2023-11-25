@@ -303,15 +303,26 @@ in {
                   ducumentation = cmp.config.window.bordered(),
                 },
                 mapping = cmp.mapping.preset.insert({
+                  -- Confirm completion with `Enter` (default is `Ctrl-y`)
+                  ['<CR>'] = cmp.mapping.confirm({select = false}),
+                  -- Navigate completion with `Tab` and `Shift-Tab`
+                  -- (default are `Ctrl+` `n` and `p`)
+                  -- (defaults alse trigger completion)
+                  ['<Tab>'] = cmp_action.tab_complete(),
+                  ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+                  -- Initialize completion
                   ['<C-Space>'] = cmp.mapping.complete(),
-                  ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-                  ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+                  -- Navigate documentation
                   ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                   ['<C-d>'] = cmp.mapping.scroll_docs(4),
+                  -- Navigate snippet placeholders
+                  ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+                  ['<C-b>'] = cmp_action.luasnip_jump_backward(),
                 }),
                 sources = {
                   {name = 'copilot'},
                   {name = 'nvim_lsp'},
+                  {name = 'luasnip'},
                   {name = 'path'},
                 },
 
