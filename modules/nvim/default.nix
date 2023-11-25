@@ -299,8 +299,8 @@ in {
               local cmp_action = lsp.cmp_action()
               cmp.setup({
                 window = {
-                  comptetion = cmp.config.window.bordered(),
-                  ducumentation = cmp.config.window.bordered(),
+                  completion = cmp.config.window.bordered(),
+                  documentation = cmp.config.window.bordered(),
                 },
                 mapping = cmp.mapping.preset.insert({
                   -- Confirm completion with `Enter` (default is `Ctrl-y`)
