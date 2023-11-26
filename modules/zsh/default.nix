@@ -29,8 +29,8 @@ in {
         shellAliases = {
           add-deleted="git status | grep 'deleted' | awk '{ print $2 }' | xargs git add";
           jqp="jq -C | less -R";
-          ls="eza -Slhg --icons";
-          la="eza -Slhga --icons";
+          ls="eza -Slhg --icons=auto";
+          la="eza -Slhga --icons=auto";
           maps="telnet mapscii.me";
           nwitch="sudo nixos-rebuild switch --flake /home/ejiek/.slashNix/flake.nix#e220";
           ntest="sudo nixos-rebuild test --flake /home/ejiek/.slashNix/flake.nix#e220";
