@@ -19,18 +19,15 @@ in {
       programs.qutebrowser = {
         enable = true;
         aliases = {
-          "arch" = "open https://archlinux.org";
-          "ff" = "spawn firefox {url}";
-          "mail" = "open https://e.mail.ru/messages/inbox";
-          "mpv" = "spawn mpv {url}";
+          "ff" = "spawn --detach firefox {url}";
+          "mpv" = "spawn --detach mpv {url}";
           "proxy-gateway" = "set content.proxy socks://localhost:8118/";
           "proxy-off" = "set content.proxy system";
           "q" = "quit";
           "stig-add" = "spawn stig add {url}";
-          "tor" = "spawn tor-browser {url}";
+          "tor" = "spawn --detach tor-browser {url}";
           "w" = "session-save";
           "wq" = "quit --save";
-          "yt" = "open https://youtube.com/feed/subscriptions";
         };
         searchEngines = {
           DEFAULT = "https://duckduckgo.com/?q={}";
@@ -91,6 +88,12 @@ in {
           yamaps = "https://yandex.ru/maps/2/saint-petersburg/search/{}/";
           yt = "https://youtube.com/results?search_query={}";
           "я" = "https://yandex.ru/search/?lr=2&text={}";
+        };
+        quickmarks = {
+          arch = "https://archlinux.org";
+          mail = "https://e.mail.ru/messages/inbox";
+          oklch = "https://oklch.com";
+          yt = "https://youtube.com/feed/subscriptions";
         };
         extraConfig = ''
           c.editor.command = ['alacritty', '-e', 'vim', '{}']
