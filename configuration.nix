@@ -62,8 +62,8 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        serif = [ "Hack" ];
-        sansSerif = [ "Hack" ];
+        serif = [ "Hack Nerd Font" ];
+        sansSerif = [ "Hack Nerd Font" ];
         monospace = [ "FiraCode Nerd Font Mono" ];
         emoji = [ "NotoColorEmoji" ];
       };
