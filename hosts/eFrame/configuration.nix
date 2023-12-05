@@ -20,6 +20,8 @@
     KEYBOARD_KEY_01=capslock
   '';
 
+  services.fwupd.enable = true;
+
   programs.gamescope = {
     enable = true;
     capSysNice = true;
