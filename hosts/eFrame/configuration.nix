@@ -46,6 +46,7 @@
     krita
     kubectl
     libwebp
+    linux-firmware
     mattermost-desktop
     mpv
     nodejs
