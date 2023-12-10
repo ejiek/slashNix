@@ -3,7 +3,7 @@ let inherit (lib) types mkIf mkDefault mkOption;
 in {
   options.my-config = {
     spotify.enable = mkOption {
-      description = "Enable obsidian";
+      description = "Enable Spotify";
       type = types.bool;
       default = false;
     };
