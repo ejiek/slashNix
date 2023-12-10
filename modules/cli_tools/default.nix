@@ -17,6 +17,7 @@ in {
       hdparm
       ldns
       lolcat
+      nix-tree
       ripgrep
       tmate
       vhs
