@@ -44,7 +44,6 @@
     joshuto.enable = true;
     nvim.enable = true;
     nu.enable = true;
-    obsidian.enable = true;
     opentabletdriver.enable = true;
     pass.enable = true;
     podman.enable = true;
