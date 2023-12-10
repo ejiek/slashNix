@@ -9,7 +9,7 @@ in {
     };
   };
 
-  config = mkIf config.my-config.obsidian.enable {
+  config = mkIf config.my-config.rustdesk.enable {
     environment.systemPackages = with pkgs; [ rustdesk ];
     nixpkgs.allowUnfreePackages = [ "libsciter" ];
   };
