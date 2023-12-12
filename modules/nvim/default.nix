@@ -228,16 +228,16 @@ in {
             plugin = harpoon;
             type = "lua";
             config = ''
-              local mark = require("harpoon.mark")
-              local ui = require("harpoon.ui")
+              local harpoon = require("harpoon")
+              harpoon:setup()
 
-              vim.keymap.set("n", "<leader>a", mark.add_file)
-              vim.keymap.set("n", "<A-g>", ui.toggle_quick_menu)
+              vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
+              vim.keymap.set("n", "<A-g>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
-              vim.keymap.set("n", "<A-a>", function() ui.nav_file(1) end)
-              vim.keymap.set("n", "<A-s>", function() ui.nav_file(2) end)
-              vim.keymap.set("n", "<A-d>", function() ui.nav_file(3) end)
-              vim.keymap.set("n", "<A-f>", function() ui.nav_file(4) end)
+              vim.keymap.set("n", "<A-a>", function() harpoon:list():select(1) end)
+              vim.keymap.set("n", "<A-s>", function() harpoon:list():select(2) end)
+              vim.keymap.set("n", "<A-d>", function() harpoon:list():select(3) end)
+              vim.keymap.set("n", "<A-f>", function() harpoon:list():select(4) end)
 
               vim.keymap.set("n", "C-k", "<cmd>cnext<CR>zz")
               vim.keymap.set("n", "C-j", "<cmd>cprev<CR>zz")
