@@ -25,6 +25,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    audacity
     calibre
     chromium
     cider
