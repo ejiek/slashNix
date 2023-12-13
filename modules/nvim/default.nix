@@ -225,7 +225,7 @@ in {
 	    '';
 	  }
           {
-            plugin = harpoon;
+            plugin = harpoon2;
             type = "lua";
             config = ''
               local harpoon = require("harpoon")
