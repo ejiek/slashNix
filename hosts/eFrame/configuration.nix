@@ -56,6 +56,8 @@
     transmission
     trivy
     virt-manager
+    wireguard-tools
+    wireguard-vanity-address
     wireshark
     wluma
   ];
