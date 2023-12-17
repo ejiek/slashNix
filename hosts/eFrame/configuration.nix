@@ -46,6 +46,7 @@
     go
     helix
     inkscape
+    iw
     k9s
     kind
     krita
