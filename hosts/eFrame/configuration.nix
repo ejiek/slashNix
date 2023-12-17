@@ -41,6 +41,7 @@
     fira-mono
     firefox
     fluffychat
+    fw-ectool
     gimp
     go
     helix
