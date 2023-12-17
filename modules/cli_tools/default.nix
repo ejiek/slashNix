@@ -11,6 +11,7 @@ in {
 
   config = mkIf config.my-config.cli_tools.enable {
     environment.systemPackages = with pkgs; [
+      bottom
       figlet
       gh
       gomuks
