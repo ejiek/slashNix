@@ -14,11 +14,14 @@
     powerKey = "ignore";
   };
 
-  services.udev.extraHwdb = ''
-  evdev:atkbd:dmi:bvn*:bvr*:bd*:svnFramework:pnLaptop*12thGenIntelCore*:pvr*
-    KEYBOARD_KEY_3a=esc
-    KEYBOARD_KEY_01=capslock
-  '';
+  services.udev = {
+    packages = [ pkgs.crda ];
+    extraHwdb = ''
+    evdev:atkbd:dmi:bvn*:bvr*:bd*:svnFramework:pnLaptop*12thGenIntelCore*:pvr*
+      KEYBOARD_KEY_3a=esc
+      KEYBOARD_KEY_01=capslock
+    '';
+  };
 
   services.fwupd.enable = true;
 
@@ -31,6 +34,7 @@
     bitwarden
     chromium
     cider
+    crda
     figlet
     fira
     fira-code
