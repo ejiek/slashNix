@@ -58,6 +58,7 @@
     virt-manager
     wireguard-tools
     wireguard-vanity-address
+    wireless-regdb
     wireshark
     wluma
   ];
