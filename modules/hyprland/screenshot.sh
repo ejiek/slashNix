@@ -16,11 +16,11 @@ grim "$SAVE_FOLDER/$DATE" | wl-copy -t image/png
 
 if [ "$TO_FILE" = true ]; then
     if [ "$FULL_SCREEN" = true ]; then
-        grim "$SAVE_FOLDER/$DATE".png
+        grim "$SAVE_FOLDER/${DATE}.png"
     else
-        grim -g "$(slurp)" "$SAVE_FOLDER/$DATE".png
+        grim -g "$(slurp)" "$SAVE_FOLDER/${DATE}.png"
     fi
-    notify-desktop "Screenshot saved" "$DATE.png" -i "$SAVE_FOLDER/$DATE".png
+    notify-desktop "Screenshot saved" "$DATE.png" -i "$SAVE_FOLDER/${DATE}.png"
 else
     if [ "$FULL_SCREEN" = true ]; then
         grim - | wl-copy -t image/png
