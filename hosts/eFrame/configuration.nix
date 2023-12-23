@@ -7,6 +7,10 @@
     })
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
   # networking.useDHCP = true;
   networking.networkmanager.enable = true;
 
