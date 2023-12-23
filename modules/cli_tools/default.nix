@@ -19,6 +19,7 @@ in {
       ldns
       lolcat
       nix-tree
+      nvd # https://gitlab.com/khumba/nvd
       ripgrep
       tmate
       vhs
