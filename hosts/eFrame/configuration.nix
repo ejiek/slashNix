@@ -50,6 +50,7 @@
     go
     helix
     inkscape
+    inotify-tools
     iw
     k9s
     kind
@@ -60,6 +61,7 @@
     mattermost-desktop
     mpv
     nodejs
+    nodePackages.live-server
     pandoc
     pulumi-bin
     tdesktop
