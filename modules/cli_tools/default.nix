@@ -13,6 +13,7 @@ in {
     environment.systemPackages = with pkgs; [
       bottom
       figlet
+      file
       gh
       gomuks
       hdparm
