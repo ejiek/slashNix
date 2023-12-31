@@ -34,6 +34,8 @@
     capSysNice = true;
   };
 
+  hardware.flipperzero.enable = true;
+
   environment.systemPackages = with pkgs; [
     bitwarden
     chromium
@@ -64,6 +66,7 @@
     nodePackages.live-server
     pandoc
     pulumi-bin
+    qFlipper
     tdesktop
     transmission
     trivy
