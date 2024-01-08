@@ -21,14 +21,18 @@ in {
         # check the local terminfo database and use 'alacritty' if it is
         # available, otherwise 'xterm-256color' is used.
         env.TERM = "xterm-256color";
-        padding = {
-          x = 2;
-          y = 2;
+        window = {
+          padding = {
+            x = 2;
+            y = 2;
+          };
+          decorations = "None";
+          dynamic_title = true;
+          dynamic_padding = true;
         };
-        dynamic_padding = true;
-        decorations = "none";
-        dynamic_title = true;
-        unfocused_hollow = true;
+        cursor = {
+          unfocused_hollow = true;
+        };
         keyboard.bindings = [
           {
             key = "PageUp";
