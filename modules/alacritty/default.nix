@@ -20,7 +20,7 @@ in {
         # each instance of Alacritty. If it is not present, alacritty will
         # check the local terminfo database and use 'alacritty' if it is
         # available, otherwise 'xterm-256color' is used.
-        TERM = "xterm-256color";
+        env.TERM = "xterm-256color";
         padding = {
           x = 2;
           y = 2;
