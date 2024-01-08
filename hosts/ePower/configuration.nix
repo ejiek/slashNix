@@ -38,6 +38,7 @@
     fira-code
     fira-mono
     firefox
+    tridactyl-native
     gimp
     go
     google-drive-ocamlfuse
