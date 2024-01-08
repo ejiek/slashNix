@@ -32,7 +32,7 @@ in {
         searchEngines = {
           DEFAULT = "https://duckduckgo.com/?q={}";
           airbnb = "https://www.airbnb.com/s/{}/";
-          ali = "https://ru.aliexpress.com/wholesale?SearchText={}";
+          ali = "https://aliexpress.ru/wholesale?SearchText={}&g=y&page=1";
           amazon = "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={}";
           aur = "https://aur.archlinux.org/packages/?O=0&K={}";
           avito = "https://www.avito.ru/sankt-peterburg?q={}";
