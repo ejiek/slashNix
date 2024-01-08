@@ -72,7 +72,7 @@
     podman.enable = true;
     rbw.enable = true;
     rofi.enable = true;
-    rustdesk.enable = true;
+    rustdesk.enable = false;
     qutebrowser.enable = true;
     spotify.enable = true;
     starship.enable = true;
