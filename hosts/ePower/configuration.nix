@@ -30,6 +30,7 @@
 
   environment.systemPackages = with pkgs; [
     audacity
+    bitwarden
     calibre
     chromium
     cider
