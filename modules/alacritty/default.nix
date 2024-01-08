@@ -29,7 +29,7 @@ in {
         decorations = "none";
         dynamic_title = true;
         unfocused_hollow = true;
-        key_bindings = [
+        keyboard.bindings = [
           {
             key = "PageUp";
             mods = "Shift";
