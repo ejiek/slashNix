@@ -7,6 +7,7 @@
     ./boot
     ./cli_tools
     ./fileSystems
+    ./firefox
     ./git
     ./hyprland
     ./joshuto

@@ -45,8 +45,6 @@
     fira
     fira-code
     fira-mono
-    firefox
-    tridactyl-native
     fluffychat
     fw-ectool
     gimp
