@@ -37,6 +37,7 @@
   hardware.flipperzero.enable = true;
 
   environment.systemPackages = with pkgs; [
+    aichat
     bitwarden
     chromium
     cider
