@@ -132,6 +132,10 @@ in {
                 suggestion = { enable = false },
                 panel = { enable = false },
               })
+              -- wait for the Copilot command (the end of a sync cycle)
+              vim.defer_fn(function()
+                vim.cmd('Copilot disable')
+              end, 0)
             '';
           }
           {
