@@ -39,6 +39,7 @@ in {
       type = types.str;
       default = ''
         ipc = off
+        splash = off
         preload = /home/ejiek/pictures/bg.jpg
         wallpaper = ,contain:/home/ejiek/pictures/bg.jpg
         '';
@@ -209,6 +210,11 @@ in {
               "fade, 1, 7, default"
               "workspaces, 1, 6, default"
             ];
+          };
+          misc = {
+            disable_hyprland_logo = true;
+            disable_splash_rendering = true;
+            disable_autoreload = true;
           };
 
           dwindle = {
