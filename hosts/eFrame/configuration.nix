@@ -18,6 +18,9 @@
     powerKey = "ignore";
   };
 
+  # Wifi firmware
+  hardware.enableRedistributableFirmware = true;
+
   services.udev = {
     packages = [ pkgs.crda ];
     extraHwdb = ''
