@@ -25,6 +25,7 @@ in {
       tmate
       vhs
       wget
+      whois
       yt-dlp
       zellij
     ];
