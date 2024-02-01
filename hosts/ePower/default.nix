@@ -57,6 +57,7 @@
       ];
       paperConfig = ''
         ipc = off
+        splash = off
         preload = /home/ejiek/pictures/bg.jpg
         preload = /home/ejiek/pictures/bg-right.jpg
         wallpaper = DP-2,contain:/home/ejiek/pictures/bg.jpg
