@@ -29,6 +29,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    aichat
     audacity
     bitwarden
     calibre
