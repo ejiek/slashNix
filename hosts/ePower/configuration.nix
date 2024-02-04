@@ -33,6 +33,7 @@
 
   environment.systemPackages = with pkgs; [
     aichat
+    alsa-scarlett-gui
     audacity
     bitwarden
     calibre
