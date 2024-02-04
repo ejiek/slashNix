@@ -23,7 +23,7 @@
 
   home-manager.users.ejiek = {
     home.username = "ejiek";
-    home.stateVersion = "23.05";
+    home.stateVersion = "23.11";
   };
 
   programs.neovim = {

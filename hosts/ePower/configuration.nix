@@ -28,6 +28,9 @@
     capSysNice = true;
   };
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   environment.systemPackages = with pkgs; [
     aichat
     audacity
@@ -59,7 +62,6 @@
     tdesktop
     transmission
     trivy
-    virt-manager
     wireguard-tools
     wireguard-vanity-address
     wireshark

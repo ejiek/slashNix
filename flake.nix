@@ -38,7 +38,7 @@
                   self.rev
                 else
                   throw "refuse to build: git tree is dirty";
-                system.stateVersion = "23.05";
+                system.stateVersion = "23.11";
                 imports = [
                   "${nixpkgs}/nixos/modules/installer/scan/not-detected.nix"
                   # "${nixpkgs}/nixos/modules/profiles/hardened.nix"
