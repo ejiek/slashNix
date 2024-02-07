@@ -51,6 +51,7 @@
     inkscape
     k9s
     kind
+    kooha
     krita
     kubectl
     libimobiledevice
