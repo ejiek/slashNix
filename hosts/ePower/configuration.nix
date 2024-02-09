@@ -48,6 +48,7 @@
     go
     google-drive-ocamlfuse
     helix
+    helvum
     inkscape
     k9s
     kind
@@ -61,6 +62,7 @@
     nodejs
     pandoc
     pulumi-bin
+    qpwgraph
     tdesktop
     transmission
     trivy
