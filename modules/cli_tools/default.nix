@@ -23,6 +23,7 @@ in {
       nix-tree
       nvd # https://gitlab.com/khumba/nvd
       ripgrep
+      speedtest-go
       tmate
       vhs
       wget
