@@ -50,6 +50,7 @@
     helix
     helvum
     inkscape
+    ventoy-full
     k9s
     kind
     kooha
