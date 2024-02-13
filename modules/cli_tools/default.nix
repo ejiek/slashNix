@@ -15,6 +15,7 @@ in {
       figlet
       file
       gh
+      glab
       gomuks
       hdparm
       ipcalc
