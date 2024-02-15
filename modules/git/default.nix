@@ -30,6 +30,12 @@ in {
           "*.swp"
           ".envrc"
         ];
+        delta = {
+          enable = true;
+          options = {
+            light = true;
+          };
+        };
       };
     };
   };
