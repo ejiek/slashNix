@@ -6,6 +6,7 @@
     ./bluetooth
     ./boot
     ./cli_tools
+    ./dev_tools
     ./fileSystems
     ./firefox
     ./git

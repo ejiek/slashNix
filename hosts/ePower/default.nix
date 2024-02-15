@@ -36,6 +36,7 @@
     bat.enable = true;
     bluetooth.enable = true;
     cli_tools.enable = true;
+    dev_tools.enable = true;
     git.enable = true;
     hypr = {
       enable = true;

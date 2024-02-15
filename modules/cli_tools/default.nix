@@ -14,8 +14,6 @@ in {
       bottom
       figlet
       file
-      gh
-      glab
       gomuks
       hdparm
       ipcalc
