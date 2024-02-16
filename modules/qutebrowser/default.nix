@@ -126,9 +126,10 @@ in {
           c.colors.statusbar.command.bg = '#fbf1c7'
           c.colors.statusbar.caret.bg = '#b16286'
           c.colors.statusbar.progress.bg = '#3c3836'
-          c.colors.statusbar.url.success.http.fg = '#d79921'
+          c.colors.statusbar.url.fg = '#3c3836'
+          c.colors.statusbar.url.success.http.fg = '#af3a03'
           c.colors.statusbar.url.success.https.fg = '#98971a'
-          c.colors.statusbar.url.error.fg = '#d65d0e'
+          c.colors.statusbar.url.error.fg = '#9d0006'
           c.colors.statusbar.url.warn.fg = '#d79921'
           c.colors.statusbar.url.hover.fg = '#689d6a'
 
