@@ -50,6 +50,7 @@
     helix
     helvum
     inkscape
+    inotify-tools
     ventoy-full
     k9s
     kind
@@ -61,6 +62,7 @@
     mattermost-desktop
     mpv
     nodejs
+    nodePackages.live-server
     pandoc
     pulumi-bin
     qpwgraph
