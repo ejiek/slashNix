@@ -44,7 +44,13 @@
   programs.git.enable = true;
 
   security = {
-    doas.enable = true;
+    doas = {
+      enable = true;
+      extraRules = [{
+        users = ["ejiek"];
+        persist = true;
+      }];
+    };
     sudo.enable = false;
   };
 
