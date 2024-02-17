@@ -64,10 +64,6 @@ in {
           nix = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}";
           nixo = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=options&query={}";
           nw = "https://nixos.wiki/index.php?search={}&go=Go";
-          ob = "https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}";
-          obs = "https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues?scope=all&utf8=%E2%9C%93&state=all&search={}";
-          og = "https://gitlab.ocado.tech/dashboard/groups?utf8=%E2%9C%93&filter={}";
-          op = "https://gitlab.ocado.tech/?utf8=%E2%9C%93&name={}%09&sort=latest_activity_desc";
           pac = "https://www.archlinux.org/packages/?q={}";
           paca = "https://www.archlinuxarm.org/packages/?q={}";
           pacd = "https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords={}";
