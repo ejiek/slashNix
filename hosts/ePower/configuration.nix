@@ -49,6 +49,7 @@
     google-drive-ocamlfuse
     helix
     helvum
+    home-assistant-cli
     inkscape
     inotify-tools
     ventoy-full
