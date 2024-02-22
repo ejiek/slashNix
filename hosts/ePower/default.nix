@@ -66,6 +66,7 @@
       '';
     };
     joshuto.enable = true;
+    mail.enable = true;
     nvim.enable = true;
     nu.enable = true;
     obsidian.enable = true;

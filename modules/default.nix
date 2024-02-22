@@ -12,6 +12,7 @@
     ./git
     ./hyprland
     ./joshuto
+    ./mail
     ./networking
     ./nu
     ./nvim
