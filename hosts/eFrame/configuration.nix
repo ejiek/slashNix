@@ -22,7 +22,6 @@
   hardware.enableRedistributableFirmware = true;
 
   services.udev = {
-    packages = [ pkgs.crda ];
     extraHwdb = ''
     evdev:atkbd:dmi:bvn*:bvr*:bd*:svnFramework:pnLaptop*12thGenIntelCore*:pvr*
       KEYBOARD_KEY_3a=esc
@@ -70,7 +69,6 @@
     bitwarden
     chromium
     cider
-    crda
     figlet
     fira
     fira-code
