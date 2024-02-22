@@ -217,17 +217,17 @@ in {
               require('nvim-ts-autotag').setup()
             '';
           }
-	  {
-	    plugin = nvim-colorizer-lua;
-	    type = "lua";
-	    config = ''
-	      require 'colorizer'.setup{
+          {
+            plugin = nvim-colorizer-lua;
+            type = "lua";
+            config = ''
+              require 'colorizer'.setup{
                 user_default_options = {
-		  mode = "virtualtext";
-		},
-	      }
-	    '';
-	  }
+                  mode = "virtualtext";
+                },
+              }
+            '';
+          }
           {
             plugin = harpoon2;
             type = "lua";
