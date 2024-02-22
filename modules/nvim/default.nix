@@ -223,7 +223,9 @@ in {
             config = ''
               require 'colorizer'.setup{
                 user_default_options = {
-                  mode = "virtualtext";
+                  mode = "background",
+                  -- Available methods are false / true / "normal" / "lsp" / "both"
+                  tailwind = "lsp", -- Enable tailwind colors
                 },
               }
             '';
@@ -288,6 +290,7 @@ in {
 
               lsp.setup_servers({
                 'astro',
+                'tailwindcss',
                 'tsserver',
                 'eslint',
                 'rust_analyzer',
@@ -353,6 +356,7 @@ in {
         gopls
         nodePackages.bash-language-server
         shellcheck
+        tailwindcss-language-server
       ];
 
      #TODO: fix "${config.xdg.configHome} not working
