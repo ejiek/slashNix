@@ -70,6 +70,7 @@
       nixosConfigurations = {
         ePower = mkHost "ePower" "x86_64-linux";
         eFrame = mkHost "eFrame" "x86_64-linux";
+        eTower = mkHost "eTower" "x86_64-linux";
       };
     };
 }
