@@ -23,6 +23,7 @@
 
   environment.systemPackages = with pkgs; [
     libimobiledevice
+    liquidctl
     wireguard-tools
     wireguard-vanity-address
   ];
