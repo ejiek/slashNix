@@ -7,6 +7,13 @@
 
 { system, pkgs, ... }: {
   inherit pkgs system;
+
+  fileSystems."/home/ejiek/.local/share/Steam" =
+    { device = "/dev/disk/by-id/nvme-Samsung_SSD_980_PRO_1TB_S5GXNF0W120109E-part1";
+      fsType = "ext4";
+      options = [ "noatime" ];
+    };
+
   zfs-root = {
     boot = {
       devNodes = "/dev/disk/by-id/";
