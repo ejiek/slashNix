@@ -60,9 +60,9 @@ in {
           maps = "https://openstreetmap.org/search?query={}";
           man = "https://man.archlinux.org/man/{}";
           market = "https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1";
+          mynix = "https://mynixos.com/search?q={}";
           netflix = "https://www.netflix.com/search?q={}";
           nix = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}";
-          nixo = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=options&query={}";
           nw = "https://nixos.wiki/index.php?search={}&go=Go";
           pac = "https://www.archlinux.org/packages/?q={}";
           paca = "https://www.archlinuxarm.org/packages/?q={}";
