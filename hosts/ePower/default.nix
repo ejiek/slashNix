@@ -9,7 +9,7 @@
   inherit pkgs system;
 
   fileSystems."/home/ejiek/.local/share/Steam" =
-    { device = "/dev/disk/by-id/nvme-Samsung_SSD_980_PRO_1TB_S5GXNF0W120109E-part1";
+    { device = "/dev/disk/by-uuid/4ef67b32-2507-488b-8433-96e35b44f41f";
       fsType = "ext4";
       options = [ "noatime" ];
     };
