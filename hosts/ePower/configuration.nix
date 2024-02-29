@@ -70,6 +70,7 @@
     tdesktop
     transmission
     trivy
+    usbutils
     wireguard-tools
     wireguard-vanity-address
     wireshark
