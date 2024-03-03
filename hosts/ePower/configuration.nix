@@ -64,6 +64,7 @@
     mpv
     nodejs
     nodePackages.live-server
+    nvtop-amd
     pandoc
     pulumi-bin
     qpwgraph
