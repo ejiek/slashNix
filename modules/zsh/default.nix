@@ -39,6 +39,10 @@ in {
           sdfailed="systemctl list-units --failed";
           ssproxy="ssh -D 1080 -C -q -N";
           suspendless="systemd-inhibit --what=handle-lid-switch sleep infinity";
+          ts="doas tailscale status";
+          tse="doas zsh -c 'tailscale down && tailscale up --exit-node 100.100.72.113; tailscale status'";
+          tsu="doas zsh -c 'tailscale down && tailscale up --exit-node \"\"; tailscale status'";
+          tsd="doas tailscale down";
         };
         initExtra = ''
           bindkey -e
