@@ -146,6 +146,16 @@ in {
             '';
           }
           {
+            plugin = cloak-nvim;
+            type = "lua";
+            config = ''
+            require('cloak').setup({
+              enabled = true,
+            })
+            vim.keymap.set("n", "<leader>ct", "<cmd>CloakToggle<CR>")
+            '';
+          }
+          {
             plugin = gruvbox-community;
             config = ''
               set termguicolors
