@@ -21,7 +21,7 @@ in {
 
     # local share
     networking.firewall = {
-      allowedTCPPorts = [ 24070 ];
+      allowedTCPPorts = [ 27040 ];
       allowedUDPPortRanges = [{
         from = 27031;
         to = 27036;
