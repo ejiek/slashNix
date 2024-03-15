@@ -20,6 +20,12 @@ in {
     nixpkgs.allowUnfreePackages = [ "steam" "steam-original" "steam-run" ];
 
     # local share
-    networking.firewall.allowedTCPPorts = [ 24070 ];
+    networking.firewall = {
+      allowedTCPPorts = [ 24070 ];
+      allowedUDPPortRanges = [{
+        from = 27031;
+        to = 27036;
+      }];
+    };
   };
 }
