@@ -15,7 +15,7 @@ in {
         enable = true;
         settings = {
           email = "ejiek@pm.me";
-          pinentry = "curses";
+          pinentry = pkgs.pinentry-curses;
         };
       };
       home.packages = with pkgs; [
