@@ -17,6 +17,10 @@ in {
 
     programs.gamemode.enable = true;
 
+    home-manager.users.ejiek = {
+      programs.mangohud.enable = true;
+    };
+
     nixpkgs.allowUnfreePackages = [ "steam" "steam-original" "steam-run" ];
 
     # local share
