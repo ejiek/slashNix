@@ -60,7 +60,6 @@
     kubectl
     libimobiledevice
     libwebp
-    mattermost-desktop
     mpv
     nodejs
     nodePackages.live-server
