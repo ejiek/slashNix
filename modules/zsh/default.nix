@@ -20,7 +20,7 @@ in {
         enable = true;
         enableCompletion = true;
         syntaxHighlighting.enable = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         envExtra = "PATH=$PATH:$HOME/work/um/clarity";
         history = {
           share = true;
