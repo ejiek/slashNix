@@ -36,6 +36,7 @@
     alsa-scarlett-gui
     audacity
     bitwarden
+    boatswain
     calibre
     chromium
     cider
