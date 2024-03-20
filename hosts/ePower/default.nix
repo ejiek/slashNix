@@ -59,9 +59,9 @@
         "5, monitor:DP-2"
         "6, monitor:DP-2"
         "7, monitor:DP-2"
-        "8, monitor:HDMI-A-1"
-        "9, monitor:HDMI-A-1"
-        "10, monitor:HDMI-A-1, default:true"
+        "8, monitor:HDMI-A-1, layoutopt:orientation:top"
+        "9, monitor:HDMI-A-1, layoutopt:orientation:top"
+        "10, monitor:HDMI-A-1, layoutopt:orientation:top, default:true"
       ];
       paperConfig = ''
         ipc = off
