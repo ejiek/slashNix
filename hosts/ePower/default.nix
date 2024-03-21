@@ -58,7 +58,7 @@
         "4, monitor:DP-2"
         "5, monitor:DP-2"
         "6, monitor:DP-2"
-        "7, monitor:DP-2"
+        "7, monitor:DP-2, gapsin:0, gapsout:0, border:false, shadow:false, decorate:false"
         "8, monitor:HDMI-A-1, layoutopt:orientation:top"
         "9, monitor:HDMI-A-1, layoutopt:orientation:top"
         "10, monitor:HDMI-A-1, layoutopt:orientation:top, default:true"
