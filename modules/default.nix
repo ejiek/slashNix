@@ -30,6 +30,7 @@
     ./steam
     ./tailscale
     ./unfree
+    ./warp
     ./xone
     ./zathura
     ./zsh
