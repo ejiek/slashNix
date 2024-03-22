@@ -243,7 +243,7 @@ in {
           "$mainMod" = "SUPER";
 
           bind = [
-            "$mainMod, Return, exec, alacritty"
+            "$mainMod, Return, exec, alacritty msg create-window || alacritty"
             "$mainMod, Space, exec, rofi -show drun"
             "$mainMod, P, exec, rofi-rbw"
             "$mainMod, E, exec, rofimoji"
