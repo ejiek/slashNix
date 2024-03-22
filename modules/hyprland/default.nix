@@ -24,6 +24,16 @@ in {
       type = types.listOf types.str;
       default = [ ];
     };
+    hypr.windowrules = mkOption {
+      description = "Window rules";
+      type = types.listOf types.str;
+      default = [ ];
+    };
+    hypr.windowrules_v2 = mkOption {
+      description = "Window rules";
+      type = types.listOf types.str;
+      default = [ ];
+    };
     hypr.cursor.size = mkOption {
       description = "Cursor size";
       type = types.int;
@@ -176,6 +186,8 @@ in {
           };
 
           workspace = config.my-config.hypr.workspaces;
+          windowrule = config.my-config.hypr.windowrules;
+          windowrulev2 = config.my-config.hypr.windowrules_v2;
 
           general = {
             gaps_in = 5;

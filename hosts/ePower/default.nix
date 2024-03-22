@@ -63,6 +63,15 @@
         "9, monitor:HDMI-A-1, layoutopt:orientation:top"
         "10, monitor:HDMI-A-1, layoutopt:orientation:top, default:true"
       ];
+      windowrules = [
+        "noanim,^(steam_app*)$"
+      ];
+      windowrules_v2 = [
+        "workspace 7,class:^(steam_app),title:(.+)" # Steam games with non empty title
+        "workspace 6 silent,class:^(steam_app),title:^$" # moves nProtect away from the game
+        "workspace 6,class:^(steam)$,title:^(Steam)$"
+        "fullscreen,class:^(steam_app),title:(.+)"
+      ];
       paperConfig = ''
         ipc = off
         splash = off
