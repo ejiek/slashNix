@@ -69,6 +69,8 @@
       windowrules_v2 = [
         "workspace 7,class:^(steam_app),title:(.+)" # Steam games with non empty title
         "workspace 6 silent,class:^(steam_app),title:^$" # moves nProtect away from the game
+        "workspace 6 silent,class:^(.+)$,title:^(Steam)$" # move away Steam updater
+        "workspace 6 silent,class:^(zenity)$,title:^(.+)$" # move away Steam runtime updater
         "workspace 6,class:^(steam)$,title:^(Steam)$"
         "fullscreen,class:^(steam_app),title:(.+)"
       ];
