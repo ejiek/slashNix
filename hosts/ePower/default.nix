@@ -72,6 +72,7 @@
         "workspace 6 silent,class:^(.+)$,title:^(Steam)$" # move away Steam updater
         "workspace 6 silent,class:^(zenity)$,title:^(.+)$" # move away Steam runtime updater
         "workspace 6,class:^(steam)$,title:^(Steam)$"
+        "workspace 6 silent,class:^(steam)$,title:^(Sign in to Steam)$"
         "fullscreen,class:^(steam_app),title:(.+)"
       ];
       paperConfig = ''
