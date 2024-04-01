@@ -69,6 +69,7 @@
     bitwarden
     chromium
     cider
+    ethtool
     figlet
     fira
     fira-code
