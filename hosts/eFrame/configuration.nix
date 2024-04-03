@@ -66,6 +66,7 @@
 
   environment.systemPackages = with pkgs; [
     aichat
+    appimage-run
     bitwarden
     chromium
     cider
