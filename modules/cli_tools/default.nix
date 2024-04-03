@@ -24,6 +24,7 @@ in {
       ripgrep
       speedtest-go
       tmate
+      tree
       vhs
       wget
       whois
