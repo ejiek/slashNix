@@ -80,6 +80,7 @@
     gimp
     go
     helix
+    imv
     inkscape
     inotify-tools
     iw
