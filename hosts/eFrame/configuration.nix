@@ -104,5 +104,7 @@
     wireless-regdb
     wireshark
     wluma
+    qdl
+    minicom
   ];
 }
