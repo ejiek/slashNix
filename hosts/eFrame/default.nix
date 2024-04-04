@@ -38,7 +38,7 @@
       enable = true;
       layout = "dwindle";
       monitors = [
-        "monitor=,highres,auto,2"
+        ",highres,auto,2"
       ];
       cursor.size = 24;
       extraConfig = "env = GDK_SCALE,2";
