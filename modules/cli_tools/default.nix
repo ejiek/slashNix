@@ -17,6 +17,7 @@ in {
       gomuks
       hdparm
       ipcalc
+      jaq
       ldns
       lolcat
       nix-tree
