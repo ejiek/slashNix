@@ -100,6 +100,7 @@
     transmission
     trivy
     virt-manager
+    webcord
     wireguard-tools
     wireguard-vanity-address
     wireless-regdb
