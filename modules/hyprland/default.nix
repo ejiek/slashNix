@@ -111,6 +111,10 @@ in {
           ];
           text = (builtins.readFile ./screenshot.sh);
         })
+        (writeShellApplication {
+          name = "hypr-gamemode";
+          text = (builtins.readFile ./gamemode.sh);
+        })
       ];
 
       home.sessionVariables = {
@@ -310,6 +314,9 @@ in {
             "$mainMod, M, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
             ",XF86MonBrightnessDown, exec, brightnessctl set '5%-'"
             ",XF86MonBrightnessUp, exec, brightnessctl set '+5%'"
+
+            # Game Mode
+            "$mainMod, G, exec, hypr-gamemode"
 
             # Color picker
             "$mainMod ALT, P, exec, hyprpicker --autocopy --no-fancy"
