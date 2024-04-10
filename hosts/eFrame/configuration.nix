@@ -1,9 +1,9 @@
-{ pkgs, nixos-hardware, rust-overlay, ... }: {
+{ pkgs, nixos-hardware, rust-overlay, pelp, ... }: {
   imports = [
     nixos-hardware.nixosModules.framework-12th-gen-intel
     ({ pkgs, ... }: {
       nixpkgs.overlays = [ rust-overlay.overlays.default ];
-      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default pkgs.gcc ];
+      environment.systemPackages = [ pkgs.rust-bin.stable.latest.default pkgs.gcc pelp.packages.x86_64-linux.default ];
     })
   ];
 
