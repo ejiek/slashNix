@@ -12,9 +12,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    pelp = {
+      url = "github:ejiek/pelp/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, rust-overlay }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, rust-overlay, pelp }:
     let
       mkHost = hostName: system:
         (({ my-config, zfs-root, pkgs, system, ... }:
@@ -27,7 +31,7 @@
               # Host specific
               (if (builtins.pathExists
                 ./hosts/${hostName}/configuration.nix) then
-                (import ./hosts/${hostName}/configuration.nix { inherit pkgs nixos-hardware rust-overlay; })
+                (import ./hosts/${hostName}/configuration.nix { inherit pkgs nixos-hardware rust-overlay pelp; })
               else
                 { })
 
