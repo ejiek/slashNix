@@ -79,6 +79,7 @@
     fw-ectool
     gimp
     go
+    hadolint
     helix
     imv
     inkscape
