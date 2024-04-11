@@ -16,11 +16,14 @@ in {
     nixpkgs.allowUnfreePackages = [ "widevine-cdm" ];
 
     home-manager.users.ejiek = {
+      home.packages = with pkgs; [ python3 ]; # userscripts support
+      xdg.configFile."qutebrowser/userscripts".source = ./userscripts;
       programs.qutebrowser = {
         enable = true;
         aliases = {
           "ff" = "spawn --detach firefox {url}";
           "mpv" = "spawn --detach mpv {url}";
+          "npr" = "spawn --userscript pr_tracker.py";
           "proxy-gateway" = "set content.proxy socks://localhost:8118/";
           "proxy-off" = "set content.proxy system";
           "q" = "quit";
