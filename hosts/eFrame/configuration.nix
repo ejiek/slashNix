@@ -95,7 +95,7 @@
     nodejs
     nodePackages.live-server
     pandoc
-    #pulumi-bin
+    pulumi-bin
     qFlipper
     tdesktop
     transmission
